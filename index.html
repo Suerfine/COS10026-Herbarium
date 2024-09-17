@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <head>
+        <!--Metadata-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Herbarium">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Herbivore">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="util.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
+
+        <title>Herbarium - Home</title>
+        <link rel="icon" href="public\logo-white-bg.jpeg" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="home.html"><img src="public/logo1.png" alt="logo"></a>
+                </div>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="genera.html">Genera</a></li>
+                    <li><a href="species.html">Species</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div id="masonryContainer" class="masonry_container"></div>
+                <script>
+                    /*BEFORE REMOVING COPY THE COMPUTED HTML. I WAS LAZY TO PRINT THE INDIVIDUAL HTML AND WE MIGHT ADD ON MORE IMAGES SO THIS IS HOW IM ADDING IT*/
+                    const masonryContainer=document.getElementById("masonryContainer");
+                    ["calceata","Fruticosa","Heliotropium","Laurifolia","Matthewsii","Puya","Rhodamnia"].forEach((speci)=>{
+                        masonryContainer.innerHTML+=`
+                            <div class="masonry_item">
+                                <a href="https://youtu.be/dQw4w9WgXcQ?si=3xjsiCHLN0zFqHP_">
+                                <img src="./public/specimens/${speci}.jpg"/>
+                                <label><strong>${speci}</strong></label>
+                                </a>
+                            </div>
+                        `;
+                    });
+                    /*BEFORE REMOVING COPY THE COMPUTED HTML. I WAS LAZY TO PRINT THE INDIVIDUAL HTML AND WE MIGHT ADD ON MORE IMAGES SO THIS IS HOW IM ADDING IT*/
+                </script>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footerdiv">
+                <ul>
+                    <li>Footer</li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html> 
