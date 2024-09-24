@@ -8,6 +8,9 @@
 					<a href="index.html">Home</a>
 				</li>
 				<li>
+					<a href="classify.html">Plants Classification</a>
+				</li>
+				<li>
 					<a href="tutorial.html">Guide</a>
 					<ul class="drop">
 						<li><a href="tutorial.html">Tutorial</a></li>
@@ -26,6 +29,12 @@
 				</li>
 				<li>
 					<a href="registration.html">Registration</a>
+				</li>
+				<li>
+					<a href="members.html">Group Members</a>
+				</li>
+				<li>
+					<a href="logout.html">logout</a>
 				</li>
 			</ul>
 		</nav>
