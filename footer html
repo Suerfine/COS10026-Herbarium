@@ -1,0 +1,27 @@
+<footer>
+		<div class="footerrow">
+			<div class="footercol">
+				<h4>Herbarium</h4>
+				<ul class="footerlinks">
+					<li><a href="classify.html">Plants Classification</a></li>
+					<li><a href="identify.html">Identify</a></li>
+					<li><a href="tutorial.html">Tutorial</a></li>
+					<li><a href="tools.html">Tools</a></li>
+					<li><a href="care.html">Care</a></li>
+				</ul>
+			</div>
+			<div class="footercol">
+				<h4>Other</h4>
+				<ul class="footerhelp">
+					<li><a href="contribute.html">Contribution</a></li>
+					<li><a href="tutorial.html">Enquiry</a></li>
+				</ul>
+			</div>
+			<div class="footercol">
+				<h4>Sources</h4>
+				<ul class="enquiry-footerlink">
+					<li><a href="https://www.geeksforgeeks.org/design-a-feedback-form-using-html-and-css/">Feedback Form Design</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
