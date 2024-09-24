@@ -1,0 +1,182 @@
+
+
+@font-face{
+	font-family: "dreamwood";
+	src: url(public/fonts/dreamwood.ttf);
+}
+@font-face{
+	font-family: "perfectstrangers";
+	src: url(public/fonts/perfectstrangers.ttf);
+}
+
+/* general style */
+body::-webkit-scrollbar{
+	display: none;
+}
+
+body{
+	background-color: #f5ebce;
+	font-family: perfectstrangers;
+	margin: 0px;
+}
+
+/* navigation bar style */
+.navbar{
+	text-align: center;
+	border-bottom: 2px solid #473d2e;
+	box-shadow: 0px 1px 8px #473d2e;
+}
+
+.navbar ul{
+	list-style-type: none;
+	background: #f5ebce;
+	font-family: dreamwood, sans-serif;
+	padding: 20px 0px 20px 0px;
+	margin: 0px 0px 10px 0px;
+	overflow: hidden;
+	height: 60px;
+}
+
+.navbar ul a{
+	color: #473d2e;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 20px 100px 20px 100px;
+	width: 100px;
+	margin: 0px;
+	display: inline-block;
+	text-align: center;
+	border-style: solid none;
+	border-color: transparent;
+	border-width: 1px;
+}
+
+.navbar ul a:hover{
+	border-style: solid none;
+	border-color: #473d2e;
+	border-width: 1px;
+}
+
+.navbar li{
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+
+.homeh1{
+	list-style-type: none;
+	text-align: center;
+	color: #473d2e;
+	padding: 0px 0px 400px 0px;
+	margin: 0px;
+}
+
+.logo{
+	width: 100%;
+	height: 100px; 
+	padding: 20px 0px 0px 0px;
+}
+
+.logo a img{
+	width: 120px;
+	height: 100px;
+}
+
+/* footer style */
+.footer{
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+.footerdiv ul{
+	background-color: #f5ebce;
+	width: 100%;
+	border-top: solid #473d2e 2px;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+	margin: 0px;
+}
+
+.footerdiv ul li{
+	list-style-type: none;
+}
+
+/*INDEX STUFF*/
+.index-introduction-container{
+	position: relative;
+	width: 100%;
+}
+.index-introduction-quote{
+	position: absolute;
+	bottom: 50px;
+    width: 50%;
+    background: linear-gradient(45deg, #797164, transparent);
+    color: floralwhite;
+}
+
+.index-row{
+    background: #d1a15e;
+    position: relative;
+    display: flex;
+    width: 100%;
+    box-shadow: #7f5c2c 0px 0px 20px 3px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.index-row-descript1{
+	padding: 40px;
+    align-content: center;
+}
+
+/*UTILITY STUFF*/
+.table-bordered,.table-bordered th,td{
+	border: 1px solid #473d2e;
+	border-collapse: collapse; 
+	padding: 5px;
+}
+
+/*CSS FOR THE PROFILE PAGES, Leong*/
+.personal-name-h1{
+	font-size: 200%;
+	font-weight: bold;
+}
+.personal-studentId{
+	font-family: Arial, sans-serif;
+}
+.personal-pfp{
+	float: right;
+	padding: 20px;
+	border-style: groove;
+	border-color: #473d2e;
+}
+.personal-fav-ul{
+	margin-top: 0px;
+}
+
+.personal-title{
+	display: block;
+	margin: auto;
+}
+
+.personal-tbl-info{
+	margin-bottom: 50px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+.personal-tbl-info th{
+	background-color: #473d2e;
+	font-weight: bolder;
+	color: #f5ebce;
+	border-color: black;
+}
+.personal-tbl-info tr:nth-child(2n+1) td{
+	background-color: #f3c688;
+}
+.personal-tbl-info tr:nth-child(2n) td{
+	background-color: #f8d39f;
+}

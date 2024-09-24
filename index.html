@@ -7,7 +7,7 @@
         <meta name="author" content="Herbivore">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Stylesheets-->
-        <link rel="stylesheet" type="text/css" href="util.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="index.css">
 
         <title>Herbarium - Home</title>
@@ -29,6 +29,52 @@
             </nav>
         </header>
         <main>
+            <div class="index-introduction-container">
+                <img src="./public/images/bACKGROUND.jpg" height="auto" width="100%">
+                <h1 class="index-introduction-quote">
+                    <i>“A herbarium is better than any illustration; every botanist should make one.” — Carl Linnaeus</i>
+                </h1>
+            </div>
+            <div class="index-row">
+                <div class="index-col-img1">
+                    <img height="100%" src="public/images/Herbarium plant.jpg"/>
+                </div>
+                <div class="index-col-descript1">
+                    <h3>What is a herbarium?</h3>
+                    <p>A herbarium is a critical resource for biodiversity, ecological, and evolutionary research studies. It is a primary data source of dried and labeled plant specimens that is arranged to allow for easy retrieval access and archival storage. A herbarium is like a library, but differs in that the information is stored in a biological form––as pressed, dried, and annotated plant specimens (in the case of most vascular plants; lichens, fungi, bryophytes and some vascular plants are preserved slightly differently, although the main points are the same).</p>
+                    <a class="button-primary float-right" href="identify.html">Identify a herbarium</a>
+                </div>
+            </div>
+            <div id="ImgRow" class="index-row-image">
+                
+            </div>
+            <script>
+                /*BEFORE REMOVING COPY THE COMPUTED HTML. I WAS LAZY TO PRINT THE INDIVIDUAL HTML AND WE MIGHT ADD ON MORE IMAGES SO THIS IS HOW IM ADDING IT*/
+                ["Calceata","Fruticosa","Heliotropium","Laurifolia","Matthewsii","Puya","Rhodamnia"].forEach((speci)=>{
+                    document.getElementById("ImgRow").innerHTML+=`
+                        <img src="./public/specimens/${speci}.jpg"/>
+                    `;
+                });
+                /*BEFORE REMOVING COPY THE COMPUTED HTML. I WAS LAZY TO PRINT THE INDIVIDUAL HTML AND WE MIGHT ADD ON MORE IMAGES SO THIS IS HOW IM ADDING IT*/
+            </script>
+            <div class="index-row">
+                <div class="index-col-descript2">
+                    <p>Over the centuries, botanists, taxonomists, naturalists, and physicians have meticulously collected
+                        herbarium specimens to study and document global plant biodiversity.</p>
+                    <p>These specimens are preserved through drying, pressing, and mounting on paper sheets, each
+                        accompanied by a label that provides essential details such as the scientific name, origin, collection
+                        date, and the institution housing the specimen.</p>
+                    <p>In plant identification, taxonomists often compare a newly collected plant specimen to herbarium
+                        specimens of suspected taxa in a process known as specimen comparison to confirm its species
+                        identity.</p>
+                    <a class="button-primary float-left" href="tutorial.html">How do i make a herbarium?</a>
+                </div>
+                <div class="index-col-img2">
+                    <img height="100%" src="public/specimens/Calceata.jpg">
+                </div>
+            </div>
+            <!-- <p>These specimens are preserved through drying, pressing, and mounting on paper sheets, each accompanied by a label that provides essential details such as the scientific name, origin, collection date, and the institution housing the specimen.</p>
+                </div> -->
             <div class="container">
                 <div id="masonryContainer" class="masonry_container"></div>
                 <script>

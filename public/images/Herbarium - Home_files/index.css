@@ -1,0 +1,40 @@
+.masonry_container{
+	width: 100%;
+	column-count: 4;
+}
+
+.masonry_item{ 
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.masonry_item:hover{
+	transform: scale(1.1);
+	z-index:555555 !important;
+}
+.masonry_item img {
+	display:block;
+	width: 100%;
+}
+.masonry_item label{
+	width: 100%;
+    position: absolute;
+    bottom: 0px;
+	
+	font-size: 20pt;
+	color: white;
+	text-align: center;
+
+	padding-top: 20px;
+	background: linear-gradient(
+	  to top,
+	  rgba(0, 0, 0, 0.85),
+	  transparent
+	);
+}
+
+.container{
+	padding-left: 100px;
+	padding-right:	100px;
+}
