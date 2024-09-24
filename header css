@@ -4,7 +4,6 @@
 	font-family: dreamwood;
 	display: flex;
 	justify-content: center;
-	white-space: nowrap;
 }
 
 .navbar ul{
@@ -16,18 +15,18 @@
 	display: inline-block;
 	position: relative;
 	text-align: center;
-	width: 200px;
+	width: 100px;
 }
 
 .navbar > ul > li > a{
 	display: block;
-	padding: 20px 20px;
+	padding: 20px 0px;
 	text-decoration: none;
 	color: #473d2e;
 	border-style: solid none;
 	border-color: transparent;
 	border-width: 1px;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .drop li{
