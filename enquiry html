@@ -13,7 +13,7 @@
 	<title>Enquiry</title>
   </head>
   <!--Body-->
-  <body>
+  <body class="enquiry-body">
 	<header>
 		<nav class="navbar">
 			<div class="logo">
@@ -27,7 +27,7 @@
 					<a href="classify.html">Plants Classification</a>
 				</li>
 				<li>
-					<a href="tutorial.html">Guide</a>
+					<a href="tutorial.html">Tutorial</a>
 					<ul class="drop">
 						<li><a href="tutorial.html">Tutorial</a></li>
 						<li><a href="tools.html">Tools</a></li>
@@ -38,19 +38,13 @@
 					<a href="identify.html">Identify</a>
 				</li>
 				<li>
-					<a href="contribute.html">Contribution</a>
-				</li>
-				<li>
 					<a href="enquiry.html">Enquiry</a>
 				</li>
 				<li>
 					<a href="registration.html">Registration</a>
 				</li>
 				<li>
-					<a href="members.html">Group Members</a>
-				</li>
-				<li>
-					<a href="logout.html">logout</a>
+					<a href="logout.html">Profile</a>
 				</li>
 			</ul>
 		</nav>
@@ -58,7 +52,7 @@
 	<div class="enquiry-formbox">
 		<div class="enquiry-heading">
 			<h1>Enquiry Form</h1>
-			<h3>Please provide us feedback about our website.</h3>
+			<h3>Please fill the form to place your order.</h3>
 		</div>
 		<div class="enquiry-form">
 			<form>
@@ -66,7 +60,6 @@
 					<tr>
 						<td>
 							<label for="fname">
-								<i class="enquiry-fname"></i>
 								First Name:
 							</label>
 							<input type="text" id="fname" name="fname" maxlength="25" required>
@@ -75,7 +68,6 @@
 					<tr>
 						<td>
 							<label for="lname">
-								<i class="enquiry-lname"></i>
 								Last Name:
 							</label>
 							<input type="text" id="lname" name="lname" maxlength="25" required>
@@ -84,7 +76,6 @@
 					<tr>
 						<td colspan="2">
 							<label for="email">
-								<i class="enquiry-email"></i>
 								Email Address:
 							</label>
 							<input type="email" id="email" name="email" required>
@@ -96,17 +87,15 @@
 								<table>
 									<tr>
 										<td>
-											<label for="street">
-												<i class="enquiry-street"></i>
+											<label for="street" class="enquiry-street">
 												Street address:
 											</label>
-											<input type="text" id="street" name="street" maxlength="40" required>
+											<textarea id="street" name="street" maxlength="40" required></textarea>
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<label for="city">
-												<i class="enquiry-city"></i>
 												City/town:
 											</label>
 											<input type="text" id="city" name="city" maxlength="20" required>
@@ -115,7 +104,6 @@
 									<tr>
 										<td>
 											<label for="postcode">
-												<i class="enquiry-postcode"></i>
 												Postcode:
 											</label>
 											<input type="text" id="postcode" name="postcode" minlength="5" maxlength="5" required>
@@ -128,21 +116,19 @@
 					<tr>
 						<td colspan="2">
 							<label for="phone">
-								<i class="enquiry-phone"></i>
 								Phone No.:
 							</label>
-							<input type="tel" id="phone" name="phone" maxlength="10" placeholder="+60" required>
+							<input type="tel" id="phone" name="phone" maxlength="10" placeholder="+60XX-XXXXXXX" required>
 						</td>	
 					<tr>
 						<td colspan="2">	
 							<label for="tutorial">
-								<i class="enquiry-tutorial"></i>
 								Tutorial:
 							</label>
 							<select id="tutorial" name="tutorial" required>
-								<option value="tutorial1">Tutorial 1</option>
-								<option value="tutorial2">Tutorial 2</option>
-								<option value="tutorial3">Tutorial 3</option>
+								<option value="tutorial">Tutorial</option>
+								<option value="tools">Tools</option>
+								<option value="care">Care</option>
 							</select>
 							<button type="submit">
 								Submit
@@ -176,6 +162,7 @@
 				<h4>Sources</h4>
 				<ul class="enquiry-footerlink">
 					<li><a href="https://www.geeksforgeeks.org/design-a-feedback-form-using-html-and-css/">Feedback Form Design</a></li>
+					<li><a href=""></a></li>
 				</ul>
 			</div>
 		</div>
