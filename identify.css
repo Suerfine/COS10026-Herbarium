@@ -1,0 +1,90 @@
+/* identify */
+.identify-heading{
+	text-align: center;
+	margin: 50px 40px 0px 40px;
+}
+
+.identify-heading h1{
+	font: bold 25px perfectstrangers, sans-serif;
+}
+
+.identify-heading h2{
+	font: bold 18px perfectstrangers, sans-serif;
+	padding: 0px 30px 30px 30px;
+}
+
+.identify-list{
+	border: 2px solid #85827b;
+	border-radius: 15px;
+	margin: 0px 40px;
+	font: bold 18px perfectstrangers, sans-serif;
+	box-shadow: 0 0 10px rgba(36, 67, 40, 0.8);
+	background-color: #f5ebce70; 
+	padding: 130px;
+	list-style-type: none;
+}
+
+.identify-upload{
+	width: 50%;
+	height: 200px;
+	margin-left: 110px;
+	display: inline-block;
+}
+
+.identify-aside{
+	background-color: #f5ebce;
+	color: #473d2e;
+	height: 100vh;
+	float: right;
+	width: 30%;
+	font: bold 15px perfectstrangers, sans-serif;
+	text-align: center;
+	border: solid #85827b 2px;
+}
+
+.identify-aside img{
+	margin-top: 10px;
+	display: inline-block;
+	width: 100%;
+}
+
+.identify-aside figcaption{
+	font: bold 16px perfectstrangers, sans-serif;
+}
+
+.identify-aside p{
+	margin: 30px 48px;
+}
+
+.identify-content::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#identify-asidetitle{
+	font: normal 30px perfectstrangers, sans-serif;
+	margin: 40px 0px;
+}
+
+.identify-aside dt{
+	font: bold 23px perfectstrangers, sans-serif;
+}
+
+.identify-aside dd{
+	margin-top: 50px;
+	font: bold 18px perfectstrangers, sans-serif;
+	text-align: left;
+	line-height: 1.6;
+}
+
+#identify-asidefact{
+	margin: 40px 40px;
+	font: bold 20px perfectstrangers, sans-serif;
+}
+
+.identify-aside ol li{
+	font: bold 20px perfectstrangers, sans-serif;
+	margin: 20px 30px;
+	text-align: left;
+}
