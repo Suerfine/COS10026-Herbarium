@@ -1,41 +1,46 @@
 /* header style */
 .navbar{
 	border-bottom: 2px solid #85827b;
-	font-family: dreamwood;
 	display: flex;
 	justify-content: center;
+	background-color: #f5ebce;
 }
 
 .navbar ul{
 	list-style-type: none;
 	background-color: #f5ebce;
+	padding: 0px;
 }
 
 .navbar ul li{
 	display: inline-block;
 	position: relative;
 	text-align: center;
-	width: 100px;
 }
 
-.navbar > ul > li > a{
+.navbar>ul>li>a{
 	display: block;
-	padding: 20px 0px;
+	padding: 0px;
 	text-decoration: none;
 	color: #473d2e;
 	border-style: solid none;
 	border-color: transparent;
 	border-width: 1px;
 	font-size: 20px;
+	font: 25px dreamwood, sans-serif;
+	margin: 30px 20px 25px 20px;
 }
 
 .drop li{
 	display: block;
+	margin: 10px;
+	text-align: center;
 }
 
 .drop li a{
 	text-decoration: none;
 	color: #473d2e;
+	font: 20px dreamwood, sans-serif;
 }
 
 .drop li a:hover{
@@ -57,15 +62,14 @@
 .navbar ul li:hover .drop{
 	background: #f5ebce;
 	display: block;
-	padding: 20px 20px;
-	margin: 0px;
+	padding: 10px 10px;
 	border-bottom: 2px solid #85827b;
 	font-size: 20px;
 }
 
 .logo{
 	text-align: left;
-	margin: 10px 0px 0px 10px;
+	margin: 13px 15px 0px 10px;
 }
 
 .logo a img{
