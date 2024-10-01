@@ -1,4 +1,8 @@
 /* enquiry */
+.enquiry-formbox{
+	margin-bottom: 40px;
+}
+
 .enquiry-table{
 	border: 2px solid #85827b;
 	border-radius: 15px;
@@ -9,9 +13,20 @@
 }
 
 .enquiry-heading{
-	font-style: "perfectstrangers" 20px;
 	text-align: center;
 	padding-top: 30px;
+}
+
+.enquiry-heading h1{
+	font: bold 25px perfectstrangers, sans-serif;
+}
+
+.enquiry-form table{
+	background-color: #f5ebce70; 
+}
+
+.enquiry-form fieldset table{
+	background-color: transparent;
 }
 
 .enquiry-form table td{
@@ -29,7 +44,7 @@
 	width: 150px;
 	height: 25px;
 	border-radius: 15px;
-	font: 15px bold perfectstrangers, sans-serif;
+	font: bold 15px perfectstrangers, sans-serif;
 }
 
 .enquiry-form button{
@@ -44,4 +59,11 @@
 .enquiry-form button:hover{
 	color: #473d2e;
 	background-color: white;
+}
+
+#street{
+	display: block;
+	width: 100%;
+	border-radius: 10px;
+	border: 2px solid black;
 }
