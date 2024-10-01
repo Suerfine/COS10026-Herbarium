@@ -1,0 +1,114 @@
+/* tutorial */
+.tutorial-heading{
+	text-align: center;
+}
+
+.tutorial-heading h1{
+	font: bold 25px perfectstrangers, sans-serif;
+	margin: 20px 0px;
+}
+
+.tutorial-heading h2{
+	font: normal 33px perfectstrangers, sans-serif;
+	padding: 10px 5px;
+	border: 2px #85827b;
+	border-style: solid none;
+	margin: 0px;
+}
+
+.tutorial-steps{
+	width: 50%;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px 0px 0px 110px;
+	display: inline-block;
+}
+
+.tutorial-pic{
+	margin: 0px;
+	padding: 50px 0px;
+}
+
+.tutorial-pic img{
+	margin: 0px;
+	width: 770px;
+	display: flex;
+}
+
+.tutorial-pic figcaption{
+	font: bold 18px perfectstrangers, sans-serif;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.tutorial-tools dt{
+	font: normal 35px perfectstrangers, sans-serif;
+	padding-bottom: 15px;
+}
+
+.tutorial-tools dd{
+	font: normal 25px perfectstrangers, sans-serif;
+	padding: 10px 0px 0px 10px;
+	margin: 0px;
+}
+
+.tutorial-tools{
+	padding: 25px 0px;
+}
+
+.tutorial-olist>li{
+	font: normal 35px perfectstrangers, sans-serif;
+	margin-top: 20px;
+}
+
+.tutorial-olist ul li{
+	font: normal 25px perfectstrangers, sans-serif;
+	padding: 10px 0px;
+}
+
+.tutorial-aside{
+	background-color: #f5ebce;
+	color: #473d2e;
+	height: 100vh;
+	float: right;
+	width: 30%;
+	font: bold 15px perfectstrangers, sans-serif;
+	text-align: center;
+	border: solid #85827b 2px;
+}
+
+.tutorial-aside img{
+	margin-top: 10px;
+	display: inline-block;
+	width: 100%;
+}
+
+.tutorial-aside figcaption{
+	font: bold 16px perfectstrangers, sans-serif;
+}
+
+.tutorial-aside p{
+	margin: 30px 48px;
+}
+
+#tutorial-asidetitle{
+	font: normal 30px perfectstrangers, sans-serif;
+	margin: 40px 0px;
+}
+
+#tutorial-asidetext{
+	margin-top: 50px;
+	font: bold 23px perfectstrangers, sans-serif;
+	text-align: left;
+	line-height: 1.6;
+}
+
+.tutorial-content::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.tutorial-body{
+	background-color: #f5ebce; 
+}
