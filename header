@@ -11,7 +11,7 @@
 					<a href="classify.html">Plants Classification</a>
 				</li>
 				<li>
-					<a href="tutorial.html">Guide</a>
+					<a href="tutorial.html">Tutorial</a>
 					<ul class="drop">
 						<li><a href="tutorial.html">Tutorial</a></li>
 						<li><a href="tools.html">Tools</a></li>
@@ -22,19 +22,13 @@
 					<a href="identify.html">Identify</a>
 				</li>
 				<li>
-					<a href="contribute.html">Contribution</a>
-				</li>
-				<li>
 					<a href="enquiry.html">Enquiry</a>
 				</li>
 				<li>
 					<a href="registration.html">Registration</a>
 				</li>
 				<li>
-					<a href="members.html">Group Members</a>
-				</li>
-				<li>
-					<a href="logout.html">logout</a>
+					<a href="logout.html">Profile</a>
 				</li>
 			</ul>
 		</nav>
