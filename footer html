@@ -19,8 +19,11 @@
 			</div>
 			<div class="footercol">
 				<h4>Sources</h4>
-				<ul class="enquiry-footerlink">
-					<li><a href="https://www.geeksforgeeks.org/design-a-feedback-form-using-html-and-css/">Feedback Form Design</a></li>
+				<ul class="tutorial-footerlink">
+					<li><a href="https://blog.babylonstoren.com/how-to-press-plants-to-make-a-herbarium/">How to make herbarium</a></li>
+					<li><a href="https://www.hobbyfarms.com/how-to-build-use-your-own-plant-press/">Making herbarium image</a></li>
+					<li><a href="https://www.rbge.org.uk/science-and-conservation/herbarium/specimen-preparation-care/care-and-conservation-of-herbarium-specimens/#:~:text=The%20herbarium%20collections%20are%20housed,damage%20the%20fragile%20plant%20material).">Herbarium storage info</a></li>
+					<li><a href="https://eeb.utoronto.ca/research/facilities-centres/green-plant-herbarium/">1898 Herbarium image</a></li>
 				</ul>
 			</div>
 		</div>
