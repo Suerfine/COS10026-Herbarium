@@ -1,9 +1,17 @@
 /* footer */
-.footerrow{
+footer{
 	width: 100%;
-	border-top: solid #85827b 2px;
 	background-color: #f5ebce;
-	max-height: 10%;
+}
+
+.footerrow{
+	border-top: solid #85827b 2px;
+}
+
+.footerrow::after{
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .footercol{
