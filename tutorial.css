@@ -3,17 +3,19 @@
 	text-align: center;
 }
 
-.tutorial-heading h1{
+.tutorial-heading1{
 	font: bold 25px perfectstrangers, sans-serif;
 	margin: 40px 0px 20px 0px;
+	text-align: center;
 }
 
-.tutorial-heading h2{
+.tutorial-heading2{
 	font: normal 33px perfectstrangers, sans-serif;
-	padding: 10px 5px;
+	padding: 10px;
 	border: 2px #85827b;
 	border-style: solid none;
 	margin: 0px;
+	text-align: center;
 }
 
 .tutorial-steps{
@@ -46,10 +48,16 @@
 	padding-bottom: 15px;
 }
 
-.tutorial-tools dd{
-	font: normal 25px perfectstrangers, sans-serif;
+.tutorial-tools a{
+	font: normal 30px perfectstrangers, sans-serif;
 	padding: 10px 0px 0px 10px;
 	margin: 0px;
+	text-decoration: none;
+	color: #473d2e;
+}
+
+.tutorial-tools a:hover{
+	text-decoration: underline;
 }
 
 .tutorial-tools{
@@ -111,4 +119,8 @@
 
 .tutorial-body{
 	background-color: #f5ebce; 
+}
+
+.invi{
+	display: none;
 }
