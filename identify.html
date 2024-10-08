@@ -10,29 +10,31 @@
 	<!--Stylesheets-->
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link rel="icon" href="../images/logo2.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<title>Identify</title>
   </head>
   <!--Body-->
-  <body class="identify-body">
+  <body>
 	<header>
-		<nav class="navbar">
-			<div class="logo">
-				<a href="index.html"><img src="../images/logo.png" alt="logo"></a>
-			</div>
+		<nav>
+			<input type="checkbox" id="check" name="" value="">
+			<label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+			<label class="logo"><a href="index.html"><img src="../images/logo.png" alt="logo"></a></label>
 			<ul>
 				<li>
-					<a href="index.html">Home</a>
+					<a class="active" href="index.html">Home</a>
 				</li>
 				<li>
 					<a href="classify.html">Plants Classification</a>
 				</li>
-				<li>
-					<a href="tutorial.html">Tutorial</a>
+				<li class="tutli">
+					<a class="tut" href="tutorial.html">Tutorial</a>
 					<ul class="drop">
 						<li><a href="tutorial.html">Tutorial</a></li>
 						<li><a href="tools.html">Tools</a></li>
 						<li><a href="care.html">Care</a></li>
 					</ul>
+				</li>
 				</li>
 				<li>
 					<a href="identify.html">Identify</a>
@@ -44,24 +46,24 @@
 					<a href="registration.html">Registration</a>
 				</li>
 				<li>
-					<a href="logout.html">Profile</a>
+					<a href="profile.html">Profile</a>
 				</li>
 			</ul>
-		</nav>
+		<nav>
 	</header>
-	<section class="identify-content">
+	<article class="identify-content">
+		<h1 class="invi">&nbsp;</h1>
 		<section class="identify-upload">
+			<h2 class="invi">&nbsp;</h2>
 			<div class="identify-heading">
-				<h1>Plant Identification</h1>
-				<h2>Please upload a photo of your plant here. We will identify its scientific name, common name, and display photos of its herbarium specimens.</h2>
+				<h3>Plant Identification</h3>
+				<h4>Please upload a photo of your plant here. We will identify its scientific name, common name, and display photos of its herbarium specimens.</h4>
 			</div>
 			<br><br>
 			<div>
 				<dl class="identify-list">
 					<dt>
-						<label for="upload">
-							Upload Photo
-						</label>
+						Upload Photo
 					</dt>
 					<dd>
 						<br>
@@ -71,27 +73,31 @@
 			</div>
 		</section>
 		<section class="identify-aside">
+			<h5 class="invi">&nbsp;</h5>
 			<aside>
-				<p id="identify-asidetitle">Herbarium Trivia</p>
+				<p id="identify-asidetitle">Endiandra Impressicosta</p>
 				<figure>
-					<figcaption>Herbarium from 1633</figcaption>
-					<img src="../images/herbariumold2.jpg" alt="1633 herbarium">
+					<img src="../images/endiandra1.jpg" alt="endiandra">
+					<img src="../images/endiandra2.jpg" alt="endiandra">
+					<figcaption>Endiandra Images</figcaption>
 				</figure>
-				<p id="identify-asidefact">
-					The herbarium has primary and secondary functions. The primary function is accurate identification and taxonomic research. The secondary function is that it is easy for the students to learn about classification. 
-					Some other important functions are:
-				</p>
 				<ol>
 					<li>
-						It helps to preserve the plant wealth that includes type material. 
+						Common Name: Steelbutt
 					</li>
 					<li>
-						We can carry out loans of plant materials and these can be further preserved for research and exhibitions.
+						Scientific Name: <br>Endiandra impressicosta C.K.Allen
+					</li>
+					<li>
+						Family: Lauraceae
+					</li>
+					<li>
+						Genus: Endiandra
 					</li>
 				</ol>
 			</aside>
 		</section>
-	</section>
+	</article>
 	<footer>
 		<div class="footerrow">
 			<div class="footercol">
@@ -116,7 +122,11 @@
 				<ul class="identify-footerlink">
 					<li><a href="https://youtu.be/5Fws9daTtIs?si=dCdRcoqgPeatp7eD">Image Upload</a></li>
 					<li><a href="https://www.vedantu.com/biology/herbarium">Herbarium Info</a></li>
-					<li><a href="https://www.plantsci.cam.ac.uk/impact/cambridge-university-herbarium">Herbarium Image</a></li>
+					<li><a href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:464410-1">Endiandra Info</a></li>
+					<li><a href="https://v3.boldsystems.org/index.php/Taxbrowser_Taxonpage?taxid=223449">Endiandra Image1</a></li>
+					<li><a href="https://artsandculture.google.com/asset/endiandra-impressicosta-c-k-allen/_gFZ0ysx4hskKg">Endiandra Image2</a></li>
+					<li><a href="https://youtu.be/EgqwdlY9iaQ?si=o7AitaXCotQ07HXe">Navbar</a></li>
+					<li><a href="https://cdnjs.com/libraries/font-awesome">Nav Icon</a></li>
 				</ul>
 			</div>
 		</div>
