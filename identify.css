@@ -4,11 +4,11 @@
 	margin: 50px 40px 0px 40px;
 }
 
-.identify-heading h1{
+.identify-heading h3{
 	font: bold 25px perfectstrangers, sans-serif;
 }
 
-.identify-heading h2{
+.identify-heading h4{
 	font: bold 18px perfectstrangers, sans-serif;
 	padding: 0px 30px 30px 30px;
 }
@@ -19,9 +19,14 @@
 	margin: 0px 40px;
 	font: bold 18px perfectstrangers, sans-serif;
 	box-shadow: 0 0 10px rgba(36, 67, 40, 0.8);
-	background-color: #f5ebce70; 
+	background-color: #f5ebce; 
 	padding: 130px;
 	list-style-type: none;
+}
+
+.identify-list dd{
+	padding: 0px;
+	margin: 0px;
 }
 
 .identify-upload{
@@ -43,13 +48,17 @@
 }
 
 .identify-aside img{
-	margin-top: 10px;
-	display: inline-block;
-	width: 100%;
+	display: inline;
+	width: 180px;
+	height: 180px;
+}
+
+.identify-aside figure{
+	padding: 30px 0px;
 }
 
 .identify-aside figcaption{
-	font: bold 16px perfectstrangers, sans-serif;
+	font: bold 13px perfectstrangers, sans-serif;
 }
 
 .identify-aside p{
@@ -63,24 +72,8 @@
 }
 
 #identify-asidetitle{
-	font: normal 30px perfectstrangers, sans-serif;
-	margin: 40px 0px;
-}
-
-.identify-aside dt{
-	font: bold 23px perfectstrangers, sans-serif;
-}
-
-.identify-aside dd{
-	margin-top: 50px;
-	font: bold 18px perfectstrangers, sans-serif;
-	text-align: left;
-	line-height: 1.6;
-}
-
-#identify-asidefact{
-	margin: 40px 40px;
-	font: bold 20px perfectstrangers, sans-serif;
+	font: normal 33px perfectstrangers, sans-serif;
+	margin: 50px 0px 20px;
 }
 
 .identify-aside ol li{
