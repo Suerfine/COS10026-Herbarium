@@ -15,24 +15,25 @@
   <!--Body-->
   <body class="enquiry-body">
 	<header>
-		<nav class="navbar">
-			<div class="logo">
-				<a href="index.html"><img src="../images/logo.png" alt="logo"></a>
-			</div>
+		<nav>
+			<input type="checkbox" id="check" name="" value="">
+			<label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+			<label class="logo"><a href="index.html"><img src="../images/logo.png" alt="logo"></a></label>
 			<ul>
 				<li>
-					<a href="index.html">Home</a>
+					<a class="active" href="index.html">Home</a>
 				</li>
 				<li>
 					<a href="classify.html">Plants Classification</a>
 				</li>
-				<li>
-					<a href="tutorial.html">Tutorial</a>
+				<li class="tutli">
+					<a class="tut" href="tutorial.html">Tutorial</a>
 					<ul class="drop">
 						<li><a href="tutorial.html">Tutorial</a></li>
 						<li><a href="tools.html">Tools</a></li>
 						<li><a href="care.html">Care</a></li>
 					</ul>
+				</li>
 				</li>
 				<li>
 					<a href="identify.html">Identify</a>
@@ -44,17 +45,19 @@
 					<a href="registration.html">Registration</a>
 				</li>
 				<li>
-					<a href="logout.html">Profile</a>
+					<a href="profile.html">Profile</a>
 				</li>
 			</ul>
-		</nav>
+		<nav>
 	</header>
-	<div class="enquiry-formbox">
-		<div class="enquiry-heading">
-			<h1>Enquiry Form</h1>
+	<article class="enquiry-formbox">
+		<h1 class="invi">&nbsp;</h1>
+		<section class="enquiry-heading">
+			<h2>Enquiry Form</h2>
 			<h3>Please fill the form to place your order.</h3>
-		</div>
-		<div class="enquiry-form">
+		</section>
+		<section class="enquiry-form">
+		<h4 class="invi">&nbsp;</h4>
 			<form>
 				<table class="enquiry-table">
 					<tr>
@@ -74,7 +77,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2">
+						<td>
 							<label for="email">
 								Email Address:
 							</label>
@@ -82,7 +85,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2">
+						<td>
 							<fieldset>
 								<table>
 									<tr>
@@ -103,6 +106,29 @@
 									</tr>
 									<tr>
 										<td>
+											<label for="enquiry-state">
+												State:
+											</label>
+											<select id="enquiry-state" name="state" required>
+												<option value="" disabled selected hidden>&nbsp;</option>
+												<option value="Sarawak">Sarawak</option>
+												<option value="Perlis">Perlis</option>
+												<option value="Kedah">Kedah</option>
+												<option value="Penang">Penang</option>
+												<option value="Perak">Perak</option>
+												<option value="Selangor">Selangor</option>
+												<option value="Negeri Sembilan">Negeri Sembilan</option>
+												<option value="Melaka">Melaka</option>
+												<option value="Johor">Johor</option>
+												<option value="Kelantan">Kelantan</option>
+												<option value="Terengganu">Terengganu</option>
+												<option value="Pahang">Pahang</option>
+												<option value="Sabah">Sabah</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>
 											<label for="postcode">
 												Postcode:
 											</label>
@@ -114,18 +140,19 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2">
+						<td>
 							<label for="phone">
 								Phone No.:
 							</label>
 							<input type="tel" id="phone" name="phone" maxlength="10" placeholder="+60XX-XXXXXXX" required>
 						</td>	
 					<tr>
-						<td colspan="2">	
-							<label for="tutorial">
+						<td>	
+							<label for="enquiry-tutorial">
 								Tutorial:
 							</label>
-							<select id="tutorial" name="tutorial" required>
+							<select id="enquiry-tutorial" name="tutorial" required>
+								<option value="" disabled selected hidden>&nbsp;</option>
 								<option value="tutorial">Tutorial</option>
 								<option value="tools">Tools</option>
 								<option value="care">Care</option>
@@ -137,8 +164,8 @@
 					</tr>
 				</table>
 			</form>
-		</div>
-	</div>
+		</section>
+	</article>
 	<footer>
 		<div class="footerrow">
 			<div class="footercol">
@@ -162,7 +189,8 @@
 				<h4>Sources</h4>
 				<ul class="enquiry-footerlink">
 					<li><a href="https://www.geeksforgeeks.org/design-a-feedback-form-using-html-and-css/">Feedback Form Design</a></li>
-					<li><a href=""></a></li>
+					<li><a href="https://youtu.be/EgqwdlY9iaQ?si=o7AitaXCotQ07HXe">Navbar</a></li>
+					<li><a href="https://cdnjs.com/libraries/font-awesome">Nav Icon</a></li>
 				</ul>
 			</div>
 		</div>
