@@ -48,6 +48,10 @@
 	padding-bottom: 15px;
 }
 
+.tutorial-tools dd{
+	font: normal 18px perfectstrangers, sans-serif;
+}
+
 .tutorial-tools a{
 	font: normal 30px perfectstrangers, sans-serif;
 	padding: 10px 0px 0px 10px;
@@ -61,17 +65,22 @@
 }
 
 .tutorial-tools{
-	padding: 25px 0px;
+	padding: 0px;
 }
 
 .tutorial-olist>li{
 	font: normal 35px perfectstrangers, sans-serif;
-	margin-top: 20px;
+	margin-top: 50px;
 }
 
 .tutorial-olist ul li{
 	font: normal 25px perfectstrangers, sans-serif;
 	padding: 10px 0px;
+}
+
+.tutorial-olist img{
+	width: 100%;
+	padding: 40px 0px 20px 0px;
 }
 
 .tutorial-aside{
