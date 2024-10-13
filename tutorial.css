@@ -33,7 +33,7 @@
 
 .tutorial-pic img{
 	margin: 0px;
-	width: 770px;
+	width: 100%;
 	display: flex;
 }
 
@@ -113,7 +113,7 @@
 	font: bold 20px perfectstrangers, sans-serif;
 	text-align: left;
 	line-height: 1.6;
-	margin: 50px;
+	padding: 50px;
 }
 
 .tutorial-content{
@@ -132,4 +132,25 @@
 
 .invi{
 	display: none;
+}
+
+@media(max-width:500px){
+	.tutorial-steps{
+	padding: 20px 0px 0px 20px;
+	}
+	
+	#tutorial-asidetext{
+	font: bold 10px perfectstrangers, sans-serif;
+	text-align: left;
+	line-height: 1.6;
+	padding: 0px;
+	margin: 10%;
+	}
+	#tutorial-asidetitle{
+	font: normal 20px perfectstrangers, sans-serif;
+	margin: 10%;
+	}
+	.tutorial-aside figcaption{
+	font: bold 8px perfectstrangers, sans-serif;
+	}
 }
