@@ -5,7 +5,7 @@
 
 .tutorial-heading1{
 	font: bold 25px perfectstrangers, sans-serif;
-	margin: 40px 0px 20px 0px;
+	margin: 40px 0px;
 	text-align: center;
 }
 
@@ -97,27 +97,27 @@
 .tutorial-aside img{
 	margin-top: 10px;
 	display: inline-block;
-	width: 100%;
+	width: 80%;
 }
 
 .tutorial-aside figcaption{
 	font: bold 16px perfectstrangers, sans-serif;
 }
 
-.tutorial-aside p{
-	margin: 30px 48px;
-}
-
 #tutorial-asidetitle{
 	font: normal 30px perfectstrangers, sans-serif;
-	margin: 40px 0px;
+	margin: 50px 0px;
 }
 
 #tutorial-asidetext{
-	margin-top: 50px;
-	font: bold 23px perfectstrangers, sans-serif;
+	font: bold 20px perfectstrangers, sans-serif;
 	text-align: left;
 	line-height: 1.6;
+	margin: 50px;
+}
+
+.tutorial-content{
+	padding-bottom: 100px;
 }
 
 .tutorial-content::after{
