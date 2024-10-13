@@ -6,6 +6,7 @@
 
 .identify-heading h3{
 	font: bold 25px perfectstrangers, sans-serif;
+	padding-bottom: 20px;
 }
 
 .identify-heading h4{
@@ -61,10 +62,6 @@
 	font: bold 13px perfectstrangers, sans-serif;
 }
 
-.identify-aside p{
-	margin: 30px 48px;
-}
-
 .identify-content::after{
 	content: "";
 	display: table;
@@ -78,6 +75,6 @@
 
 .identify-aside ol li{
 	font: bold 20px perfectstrangers, sans-serif;
-	margin: 20px 30px;
+	margin: 20px 70px;
 	text-align: left;
 }
