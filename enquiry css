@@ -14,15 +14,15 @@
 
 .enquiry-heading{
 	text-align: center;
-	padding-top: 30px;
 }
 
 .enquiry-heading h2{
 	font: bold 25px perfectstrangers, sans-serif;
+	padding: 40px 0px 20px;
 }
 
 .enquiry-form table{
-	background-color: #f5ebce70; 
+	background-color: #f5ebce70;
 }
 
 .enquiry-form fieldset table{
