@@ -1,8 +1,13 @@
 <header>
 		<nav>
-			<input type="checkbox" id="check" name="" value="">
-			<label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+			<input type="checkbox" id="check" name="check" value="">
+			<label for="check" id="checkbtn">
+				<i class="fa fa-bars"></i>
+			</label>
 			<label class="logo"><a href="index.html"><img src="../images/logo.png" alt="logo"></a></label>
+			<label for="check" id="close-menu">
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+			</label>
 			<ul>
 				<li>
 					<a class="active" href="index.html">Home</a>
@@ -18,7 +23,6 @@
 						<li><a href="care.html">Care</a></li>
 					</ul>
 				</li>
-				</li>
 				<li>
 					<a href="identify.html">Identify</a>
 				</li>
@@ -32,5 +36,5 @@
 					<a href="profile.html">Profile</a>
 				</li>
 			</ul>
-		<nav>
+		</nav>
 	</header>
