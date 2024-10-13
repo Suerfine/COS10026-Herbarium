@@ -1,24 +1,4 @@
 /* header style */
-.navbar{
-	border-bottom: 2px solid #85827b;
-	display: flex;
-	justify-content: center;
-	background-color: #f5ebce;
-}
-
-.navbar ul{
-	list-style-type: none;
-	background-color: #f5ebce;/* header style */
-*{
-	margin: 0;
-	padding: 0;
-}
-
-body,html{
-	width: 100%;
-	height: 100%;
-}
-
 nav{
 	width: 100%;
 	height: 140px;
@@ -34,7 +14,8 @@ nav ul{
 nav ul li{
 	display: inline-block;
 	line-height: 80px;
-	padding:  30px 0px;
+	padding: 0px;
+	margin-top: 30px;
 }
 
 nav ul li a{
@@ -42,7 +23,6 @@ nav ul li a{
 	color: #473d2e;
 	font: normal 26px dreamwood, sans-serif;
 	padding: 10px 30px;
-	margin: 40px 0px;
 }
 
 nav>ul>li>a:hover{
@@ -72,61 +52,13 @@ nav>ul>li>a:hover{
 	right: 0;
 }
 
-@media(max-width:1500px){
-	#checkbtn{
-		display: block;
-	}
-	
-	nav ul{
-		width: 100%;
-		height: 100vh;
-		background: #f5ebce;  
-		position: fixed;
-		margin-top: 140px;
-		padding: 0px 0px;
-		right: -100%;
-		transition: right 0.3s ease;
-	}
-	nav ul li{
-		display: block;
-		text-align: center;
-		padding: 0px;
-		margin: 0px;
-		line-height: 70px;
-	}
-	.tutli:hover .drop{
-		display: block;
-	}
-	.drop li{
-		display: block;
-		padding: 0px 10px;
-		text-align: center;
-	}
+.close-menu{
+	padding: 0px 20px;
+	display: block;
+}
 
-	.drop li a{
-		text-decoration: none;
-		color: #473d2e;
-		font: 20px dreamwood, sans-serif;
-	}
-
-	.drop li a:hover{
-		text-decoration: underline;
-		text-decoration-color: #85827b;
-		color: #473d2e;
-	}
-
-	.drop li a:visited{
-		color: #473d2e;
-	}
-
-	.drop{
-		position: absolute;
-		z-index: 1002;
-		display: none;
-		font: bold 10px dreamwood, sans-serif;
-		border-bottom: solid #85827b 2px;
-		background: #f5ebce;
-	}
+nav svg{
+	display: none;
 }
 
 li:hover .drop{
@@ -138,6 +70,8 @@ li:hover .drop{
 	padding: 0px 10px;
 	text-align: center;
 	background: #f5ebce;
+	line-height: 5;
+	margin: 0px;
 }
 
 .drop li a{
@@ -163,69 +97,66 @@ li:hover .drop{
 	font: bold 10px dreamwood, sans-serif;
 	border-bottom: solid #85827b 2px;
 }
-	padding: 0px;
-}
 
-.navbar ul li{
-	display: inline-block;
-	position: relative;
-	text-align: center;
-}
-
-.navbar>ul>li>a{
+@media(max-width:1500px){
+	#checkbtn, #close-menu{
+		display: block;
+	}
+	
+	nav svg{
+	fill: var(--black);
+	margin: 20px;
 	display: block;
-	padding: 0px;
-	text-decoration: none;
-	color: #473d2e;
-	border-style: solid none;
-	border-color: transparent;
-	border-width: 1px;
-	font-size: 20px;
-	font: 25px dreamwood, sans-serif;
-	margin: 30px 20px 25px 20px;
-}
+	}
+	
+	nav>ul{
+		width: 300px;
+		height: 100vh;
+		background: #f5ebce;  
+		position: fixed;
+		padding: 0px;
+		right: -100%;
+		transition: right 0.3s ease;
+		border: 2px solid #473d2e;
+	}
+	nav ul li{
+		display: block;
+		text-align: right;
+		padding: 0px;
+		margin: 0px;
+		line-height: 70px;
+	}
+	
+	.drop li a{
+		text-decoration: none;
+		color: #473d2e;
+		font: 20px dreamwood, sans-serif;
+		margin: 0px;
+	}
+	.drop li{
+		text-align: right;
+	}
+	
+	.drop li a:hover{
+		text-decoration: underline;
+		text-decoration-color: #85827b;
+		color: #473d2e;
+	}
+	.drop li a:visited{
+		color: #473d2e;
+	}
+	.drop li a:hover .drop{
+		display: block;
+	}
 
-.drop li{
-	display: block;
-	margin: 10px;
-	text-align: center;
-}
-
-.drop li a{
-	text-decoration: none;
-	color: #473d2e;
-	font: 20px dreamwood, sans-serif;
-}
-
-.drop li a:hover{
-	text-decoration: underline;
-	text-decoration-color: #85827b;
-	color: #473d2e;
-}
-
-.drop li a:visited{
-	color: #473d2e;
-}
-
-.drop{
-	position: absolute;
-	z-index: 999;
-	display: none;
-}
-
-.navbar ul li:hover .drop{
-	background: #f5ebce;
-	display: block;
-	padding: 10px 10px;
-	border-bottom: 2px solid #85827b;
-	font-size: 20px;
-}
-
-.logo{
-	text-align: left;
-	margin: 13px 15px 0px 10px;
-}
-
-.logo a img{
-	width: 100px;
+	.drop{
+		position: relative;
+		z-index: 1002;
+		display: none;
+		font: bold 10px dreamwood, sans-serif;
+		border-bottom: solid #85827b 2px;
+		background: #f5ebce;
+		height: 30%;
+		width:  100%;
+	}
 }
