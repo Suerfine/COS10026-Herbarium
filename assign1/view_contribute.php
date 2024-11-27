@@ -17,12 +17,7 @@
     <main>
 		  <h1>Contribute Table</h1>
       <?php
-        $servername='localhost';
-        $username='root';
-        $password='';
-        $dbname='herbarium';
-
-        $conn=mysqli_connect($servername,$username,$password,$dbname);
+        include("conn.php");
 
         if(!$conn){
           die('failed to connect to db'.mysqli_connect_error());
