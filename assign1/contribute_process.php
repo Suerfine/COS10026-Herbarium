@@ -8,12 +8,7 @@
 
     if (!empty($plantName))||(!empty($family))||(!empty($genus))
     ||(!empty($species))||(!empty($herbariumImg))||(!empty($herbariumLeafImg)){
-        $servername='localhost';
-        $username='root';
-        $password='';
-        $dbname='herbarium';
-
-        $conn=mysqli_connect($servername,$username,$password,$dbname);
+        include("conn.php");
 
         if(!$conn){
             die('failed to connect to db'.mysqli_connect_error());
