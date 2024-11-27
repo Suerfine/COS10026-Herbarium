@@ -10,16 +10,14 @@
     <!--Stylesheets-->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="icon" href="images/logo2.png" type="image/x-icon">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
     <title>Update Profile</title>
 </head>
 <body>
-    <?php include('/xampp/htdocs/assign1/header.php'); ?>
-
+    <?php include('header.inc.php'); ?>
     <main>
         <h1 class="contribute-title">Update account</h1>
         <h3 class="contribute-subtitle">Fill in the latest credentials</h3>
-
         <form class="contribute-form" action="process_update.php" method="POST">
             <div>
                 <label class="contribute-form-label" for="currentEmail">Current Email:</label>
@@ -42,5 +40,6 @@
             </div>
         </form>
     </main>
+    <?php include('footer.inc.php'); ?>
 </body>
 </html>
