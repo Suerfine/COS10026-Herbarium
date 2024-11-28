@@ -23,7 +23,7 @@
           die('failed to connect to db'.mysqli_connect_error());
         }
         else{
-          $sql = 'select * from contribution';
+          $sql = 'select * from enquiry';
           $query = mysqli_query($conn,$sql);
 
           if(!$query){
