@@ -24,14 +24,14 @@
 		</section>
 		<section class="enquiry-form">
 		<h4 class="invi">&nbsp;</h4>
-			<form>
+			<form method="POST" action="enquiry_process.php">
 				<table class="enquiry-table">
 					<tr>
 						<td>
 							<label for="fname">
 								First Name:
 							</label>
-							<input type="text" id="fname" name="fname" maxlength="25" pattern="[a-zA-Z]+" required>
+							<input type="text" id="fname" name="fname" maxlength="25" pattern="[a-zA-Z\s\-]+" required>
 						</td>
 					</tr>
 					<tr>
@@ -110,7 +110,7 @@
 							<label for="phone">
 								Phone No.:
 							</label>
-							<input type="tel" id="phone" name="phone" maxlength="10" placeholder="+60XX-XXXXXXX" required>
+							<input type="tel" id="phone" name="phone" maxlength="15" placeholder="+60XX-XXXXXXX" required>
 						</td>	
 					<tr>
 						<td>	
