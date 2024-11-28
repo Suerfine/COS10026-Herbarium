@@ -50,8 +50,8 @@
               <td>'.$row['plant_family'].'</td>
               <td>'.$row['plant_genus'].'</td>
               <td>'.$row['plant_species'].'</td>
-              <td>'.$row['herbarium_img'].'</td>
-              <td>'.$row['fresh_leaf_img'].'</td>
+              <td><img src="data:image/jpeg;base64,'. base64_encode($row['herbarium_img']).'" width="100" height="100" /></td>
+              <td><img src="data:image/jpeg;base64,'. base64_encode($row['fresh_leaf_img']).'" width="100" height="100" /></td>
               </tr>';
           }
 
