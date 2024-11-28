@@ -18,10 +18,10 @@
     <main>
 		<h1 class="contribute-title">Plant contribution</h1>
         <h3 class="contribute-subtitle">Just one form, away from sharing your herbarium to the world. We thank for your contribution.</h3>
-        <form class="contribute-form">
+        <form class="contribute-form" method="POST" action="contribute_process.php" enctype="multipart/form-data">
             <div class="contribute-formgroup">
                 <label class="contribute-form-label">Plant Name:</label>
-                <input name="plantName" class="contribute-form-control" type="text" maxlength="25" pattern="[a-zA-Z]+" required>
+                <input name="plantName" class="contribute-form-control" type="text" maxlength="25" pattern="[a-zA-Z\s\-]+" required>
             </div>
 			<fieldset class="contribute-family-speci-genere">
 				<div class="contribute-formgroup">
@@ -75,7 +75,7 @@
 				</div>
 			</div>
             <div class="contribute-form-row">
-                <button>SUBMIT FORM</button>
+                <button type=submit>SUBMIT FORM</button>
             </div>
         </form>
     </main>
