@@ -14,26 +14,19 @@
             die('failed to connect to db'.mysqli_connect_error());
         }
         else{
-            $SELECT = "SELECT id from contribution Where id = ? Limit 1";
             $INSERT = "INSERT into contribution (plant_name, plant_family, plant_genus, 
             plant_species, herbarium_img, fresh_leaf_img) values(?, ?, ?, ?, ?, ?)";
 
-            $stmt = $stmt = $conn->prepare($SELECT);
-            $stmt->bind_param("ssssbb", $id);
+            $stmt = $conn->prepare($INSERT);
+            $stmt->bind_param("issssbb", $plantName, $family, $genus, 
+            $species, $herbariumImg, $herbariumLeafImg);
             $stmt->execute();
-            $stmt->bind_result($id);
-            $stmt->store_result();
-            $rnum = $stmt->num_rows;
-
-            if ($rnum == 0){
-                $stmt = $conn->prepare($INSERT);
-                $stmt->bind_param("issssbb", $plantName, $family, $genus, 
-                $species, $herbariumImg, $herbariumLeafImg);
-                $stmt->execute();
+            
+            if ($stmt->execute()){
                 echo "Contribution data succesfully saved";
             }
             else{
-            echo "ID has already contributed";
+            echo "Failed to insert data";
             }
             $stmt->close();
             $conn->close();
