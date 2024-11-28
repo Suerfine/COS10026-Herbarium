@@ -10,20 +10,8 @@
         if (isset($_FILES["herbariumImg"]) && $_FILES["herbariumImg"]["error"]===0 && 
             isset($_FILES["herbariumLeafImg"]) && $_FILES["herbariumLeafImg"]["error"]===0){
             
-                if (isset($_FILES["herbariumImg"]) && $_FILES["herbariumImg"]["error"] === 0) {
-                    $herbariumImg = file_get_contents($_FILES["herbariumImg"]["tmp_name"]);
-                } else {
-                    echo "Error uploading herbarium image: " . $_FILES["herbariumImg"]["error"];
-                    exit; // Stop execution if there's an error
-                }
-        
-                // Check if the fresh leaf image was uploaded and has no error
-                if (isset($_FILES["herbariumLeafImg"]) && $_FILES["herbariumLeafImg"]["error"] === 0) {
-                    $herbariumLeafImg = file_get_contents($_FILES["herbariumLeafImg"]["tmp_name"]);
-                } else {
-                    echo "Error uploading fresh leaf image: " . $_FILES["herbariumLeafImg"]["error"];
-                    exit; // Stop execution if there's an error
-                }
+            $herbariumImg = file_get_contents($_FILES["herbariumImg"]["tmp_name"]);
+            $herbariumLeafImg = file_get_contents($_FILES["herbariumLeafImg"]["tmp_name"]);
         
             include("conn.php");
 
