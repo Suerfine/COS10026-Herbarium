@@ -1517,3 +1517,41 @@ clear on the link the user is about to click. */
 .form-group-inline{
 	display: inline-flex;
 }
+
+/* view_contribute.php style */
+.view-contribute-table th, td{
+	text-align: center;
+	border: 1px solid var(--primary-color);
+	justify-content: center;
+	padding: 15px;
+	margin: auto;
+}
+
+.view-contribute-table table{
+	border: 2px solid var(--primary-color);
+	border-spacing: 0px;
+	margin: auto;
+}
+
+#view-contribute-h1{
+	text-align: center;
+}
+
+/* view_enquiry.php style */
+.view-enquiry-table th, td{
+	text-align: center;
+	border: 1px solid var(--primary-color);
+	justify-content: center;
+	padding: 15px;
+	margin: auto;
+}
+
+.view-enquiry-table table{
+	border: 2px solid var(--primary-color);
+	border-spacing: 0px;
+	margin: auto;
+}
+
+#view-enquiry-h1{
+	text-align: center;
+}
