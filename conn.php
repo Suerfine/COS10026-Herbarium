@@ -16,8 +16,8 @@ $sql="CREATE TABLE IF NOT EXISTS `contribution` (
         `plant_family` varchar(30) NOT NULL,
         `plant_genus` varchar(30) NOT NULL,
         `plant_species` varchar(30) NOT NULL,
-        `herbarium_img` blob NOT NULL,
-        `fresh_leaf_img` blob NOT NULL,
+        `herbarium_img` longblob NOT NULL,
+        `fresh_leaf_img` longblob NOT NULL,
         PRIMARY KEY (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
     CREATE TABLE IF NOT EXISTS `enquiry` (
