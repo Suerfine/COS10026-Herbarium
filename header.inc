@@ -32,13 +32,18 @@
 				<a href="contribute.php">Contribute</a>
 			</li>
 			<li>
-				<a href="registration.php">Registration</a>
-			</li>
-			<li>
 				<a href="group.php">Group</a>
 			</li>
 			<li>
 				<a href="enhancement1.php">Enhancement</a>
+			</li>
+			<li class="tutli">
+				<a class="tut" href="login.php">User</a>
+				<ul class="drop">
+					<li><a href="logout.php">Logout</a></li>
+					<li><a href="login.php">Login</a></li>
+					<li><a href="registration.php">Register</a></li>
+				</ul>
 			</li>
 		</ul>
 	</nav>
