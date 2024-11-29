@@ -14,7 +14,7 @@
 		<title>Care</title>
 	</head>
 	<body>
-		<?php include('header.inc.php'); ?>
+		<?php include('header.inc'); ?>
 		<main class="care-container">
 			<h1 class="care-h1">Care</h1>
 			<section id="care-intro" class="care-intro">
@@ -261,7 +261,7 @@
 				["url"=>"https://www.floridamuseum.ufl.edu/herbarium/methods/specimen-preparation-guide/","label"=>"Example of stitching to mount specimen"],
 			];
 
-			include('./footer.inc.php'); 
+			include('./footer.inc'); 
 		?>
 	</body>
 </html>

@@ -15,7 +15,7 @@
   </head>
   <!--Body-->
   <body>
-	<?php include('header.inc.php'); ?>
+	<?php include('header.inc'); ?>
 	<article class="identify-content">
 		<h1 class="invi">&nbsp;</h1>
 		<section class="identify-upload">
@@ -75,7 +75,7 @@
 			["url"=>"https://artsandculture.google.com/asset/endiandra-impressicosta-c-k-allen/_gFZ0ysx4hskKg","label"=>"Endiandra Image2"],
 		];
 
-		include('./footer.inc.php'); 
+		include('./footer.inc'); 
 	?>
   </body>
 </html> 

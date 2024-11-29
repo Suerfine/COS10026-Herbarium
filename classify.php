@@ -15,7 +15,7 @@
   </head>
   <!--Body-->
   <body>
-	<?php include('header.inc.php'); ?>
+	<?php include('header.inc'); ?>
 	<main>
 		<img src="images/classify/Picture1.png" alt="Banner Image" width=100% height=auto>
 		<h1 class="classify-h1">Plant Classification</h1>
@@ -201,7 +201,7 @@
 			["url"=>"https://panamabiota.org/stri/taxa/index.php?taxon=62299&clid=64","label"=>"Beilschmiedia"],
 		];
 
-		include('./footer.inc.php'); 
+		include('./footer.inc'); 
 	?>
   </body>
 </html> 

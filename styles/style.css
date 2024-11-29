@@ -54,6 +54,18 @@ body::-webkit-scrollbar{
     justify-content: center;
 }
 
+.w-100{width: 100%;}
+.w-30{width: 30%;}
+.d-flex{
+	display: flex;
+}
+
+.mb-1{
+	margin-bottom: 0.1rem;
+}
+.mt-1{
+	margin-top: 0.1rem;
+}
 
 /*Some table util classes*/
 .table-bordered,.table-bordered th,.table-bordered td{
@@ -1481,4 +1493,27 @@ clear on the link the user is about to click. */
 }
 #enhancement-nav{
 	max-width: 450px;
+}
+
+/*Administration panel stuff*/
+.search-filter{
+	margin-bottom: 1rem;
+	margin-inline: 20px;
+}
+.form-control{
+	width: 100%;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+}
+.form-label{
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.form-group-inline{
+	display: inline-flex;
 }

@@ -13,7 +13,7 @@
         <title>Herbarium - Home</title>
     </head>
     <body>
-        <?php include('header.inc.php'); ?>
+        <?php include('header.inc'); ?>
         <main>
             <h1 class="enhancement-title">ENHCANCEMENTS</h1>
             <section class="enhancement-row">
@@ -136,7 +136,7 @@
                 ["url"=>"https://www.freshlypressed.ch/blog/2017/7/2/herbarium-how-to-1-ythsk","label"=>"Tutorial background image"],
             ];
 
-            include('./footer.inc.php'); 
+            include('./footer.inc'); 
         ?>
     </body>
 </html> 

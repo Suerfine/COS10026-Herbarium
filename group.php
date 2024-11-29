@@ -13,7 +13,7 @@
         <title>Group</title>
     </head>
     <body>
-        <?php include('header.inc.php'); ?>
+        <?php include('header.inc'); ?>
         <main>
             <h1 class="group-h1">MEET THE GROUP</h1>
             <section class="group-wrapper">
@@ -49,7 +49,7 @@
                 ["url"=>"https://www.linenme.com/linen-fabrics/soft-furnishing-fabrics/grey-linen-fabric-prewashed-rustico","label"=>"Grey linen"],
             ];
 
-            include('./footer.inc.php'); 
+            include('./footer.inc'); 
 	    ?>
     </body>
 </html>

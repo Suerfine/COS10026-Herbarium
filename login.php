@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!$email || !$password) {
         $message = "Both email and password are required";
     } else {
-        $sql = "SELECT id, password FROM users WHERE email = '$email'";
+        $sql = "SELECT `id`,`password`,`level` FROM users WHERE email = '$email'";
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     // Set session variables on successful login
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['logged_in'] = true;
+                    $_SESSION['level']=$user['level'];
 
                     // Redirect to contribute.php after successful login
                     header("Location: contribute.php");

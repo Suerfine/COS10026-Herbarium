@@ -15,7 +15,7 @@
   </head>
   <!--Body-->
   <body class="tutorial-body">
-	<?php include('header.inc.php'); ?>
+	<?php include('header.inc'); ?>
 	<main class="tutorial-content">
 		<section class="tutorial-steps">
 			<h1 class="tutorial-heading1">Tools</h1>
@@ -64,7 +64,7 @@
 			["url"=>"https://www.universityproducts.com/archival-storage/natural-history/herbarium-supplies?","label"=>"Tools"],
 		];
 
-		include('./footer.inc.php'); 
+		include('./footer.inc'); 
 	?>
   </body>
 </html> 

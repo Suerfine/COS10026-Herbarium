@@ -25,6 +25,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo "All fields are required.";
     }
+
+    //$SELECT = "SELECT id from contribution Where id = ? Limit 1";
+    $INSERT = "INSERT into contribution (first_name, last_name, email, 
+    street_address, 'city/town', 'state', postcode, phone_no, tutorial) values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    //$stmt = $stmt = $conn->prepare($SELECT);
+    //$stmt->bind_param("s", $id);
+    //$stmt->execute();
+    //$stmt->bind_result($id);
+    //$stmt->store_result();
+    //$rnum = $stmt->num_rows;
+    //if ($rnum == 0){
+        $stmt = $conn->prepare($INSERT);
+        $stmt->bind_param("ssssssiis", $fname, $lname, $email, 
+        $street, $city, $state, $postcode, $phone, $tutorial);
+        $stmt->execute();
+        echo "Enquiry data succesfully saved";
+        if($stmt->execute()){
+            echo "Enquiry data succesfully saved.";
+        }else{
+            echo "failed to insert";
+        }
+    //}
+    //else{
+    // echo "ID has already contributed";
+    //}
+    $stmt->close();
+    $conn->close();
+
+
 } else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "Invalid request.";
 }
@@ -47,7 +76,7 @@ mysqli_close($conn);
 	<title>Registration</title>
   </head>
   <body>    
-	<?php include('header.inc.php'); ?>
+	<?php include('header.inc'); ?>
     <main>
 		<h1 class="contribute-title">Registration</h1>
         <h3 class="contribute-subtitle">Register your account.</h3>
@@ -80,7 +109,7 @@ mysqli_close($conn);
 			["url"=>"https://cdnjs.com/libraries/font-awesome","label"=>"Nav Bar Icon"],
 			["url"=>"https://www.geeksforgeeks.org/design-a-feedback-form-using-html-and-css/","label"=>"Feedback Form Design"],
 		];
-		include('footer.inc.php'); 
+		include('footer.inc'); 
 	?>
   </body>
 </html>

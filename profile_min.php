@@ -13,7 +13,7 @@
         <title>Min Eraou</title>
     </head>
     <body>
-        <?php include('header.inc.php'); ?>
+        <?php include('header.inc'); ?>
         <main>
             <div class="row-center profile-row-book">
                 <table class="personal-book-container table-bordered">
@@ -125,7 +125,7 @@
                 ["url"=>"https://dorm-decor.com/products/fabric-swatch-soft-pink-linen","label"=>"Soft pink linen"],
             ];
 
-            include('./footer.inc.php'); 
+            include('./footer.inc'); 
         ?>
     </body>
 </html>

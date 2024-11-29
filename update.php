@@ -14,7 +14,7 @@
     <title>Update Profile</title>
 </head>
 <body>
-    <?php include('header.inc.php'); ?>
+    <?php include('header.inc'); ?>
     <main>
         <h1 class="contribute-title">Update account</h1>
         <h3 class="contribute-subtitle">Fill in the latest credentials</h3>
@@ -40,6 +40,6 @@
             </div>
         </form>
     </main>
-    <?php include('footer.inc.php'); ?>
+    <?php include('footer.inc'); ?>
 </body>
 </html>

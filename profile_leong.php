@@ -13,7 +13,7 @@
         <title>Leong Gui Xiong</title>
     </head>
     <body>
-        <?php include('header.inc.php'); ?>
+        <?php include('header.inc'); ?>
         <main>
             <div class="row-center profile-row-book">
                 <table class="personal-book-container table-bordered">
@@ -136,7 +136,7 @@
                 ["url"=>"https://www.linenme.com/linen-fabrics/soft-furnishing-fabrics/grey-linen-fabric-prewashed-rustico","label"=>"Grey linen"],
             ];
 
-            include('./footer.inc.php'); 
+            include('./footer.inc'); 
         ?>
     </body>
 </html>

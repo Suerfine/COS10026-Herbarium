@@ -24,7 +24,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	<title>Contribute</title>
   </head>
   <body>    
-	<?php include('header.inc.php'); ?>
+	<?php include('header.inc'); ?>
     <main>
 		<h1 class="contribute-title">Plant contribution</h1>
         <h3 class="contribute-subtitle">Just one form, away from sharing your herbarium to the world. We thank for your contribution.</h3>
@@ -96,7 +96,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 			["url"=>"https://cdnjs.com/libraries/font-awesome","label"=>"Nav Bar Icon"],
 		];
 
-		include('./footer.inc.php'); 
+		include('./footer.inc'); 
 	?>
   </body>
 </html>

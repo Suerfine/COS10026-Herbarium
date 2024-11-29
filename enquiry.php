@@ -15,7 +15,7 @@
   </head>
   <!--Body-->
   <body class="enquiry-body">
-	<?php include('header.inc.php'); ?>
+	<?php include('header.inc'); ?>
 	<article class="enquiry-formbox">
 		<h1 class="invi">&nbsp;</h1>
 		<section class="enquiry-heading">
@@ -140,7 +140,7 @@
 			["url"=>"https://www.geeksforgeeks.org/design-a-feedback-form-using-html-and-css/","label"=>"Feedback Form Design"],
 		];
 
-		include('./footer.inc.php'); 
+		include('./footer.inc'); 
 	?>
   </body>
 </html> 

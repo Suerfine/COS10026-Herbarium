@@ -15,7 +15,7 @@
   </head>
   <!--Body-->
   <body class="tutorial-body">
-	<?php include('header.inc.php'); ?>
+	<?php include('header.inc'); ?>
 	<article class="tutorial-content">
 		<h1 class="invi">&nbsp;</h1>
 		<section class="tutorial-steps">
@@ -107,7 +107,7 @@
 			["url"=>"https://eeb.utoronto.ca/research/facilities-centres/green-plant-herbarium/","label"=>"1898 Herbarium image"]
 		];
 
-		include('./footer.inc.php'); 
+		include('./footer.inc'); 
 	?>
   </body>
 </html> 
