@@ -1544,6 +1544,7 @@ clear on the link the user is about to click. */
 	justify-content: center;
 	padding: 15px;
 	margin: auto;
+	font-weight: bold;
 }
 
 .view-enquiry-table table{
@@ -1554,4 +1555,24 @@ clear on the link the user is about to click. */
 
 #view-enquiry-h1{
 	text-align: center;
+}
+
+/* style for links in view_contribute.php and view_enquiry.php */
+.view-links{
+	padding: 0px;
+}
+
+.view-links li{
+	list-style-type: none;
+	text-align: center;
+}
+
+.view-links li a{
+	text-decoration: none;
+	color: var(--primary-color);
+	font-weight: bold;
+}
+
+.view-links li a:visited{
+	color: var(--primary-color);
 }
