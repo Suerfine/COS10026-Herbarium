@@ -17,6 +17,10 @@
     <?php include('/xampp/htdocs/assign1/header.inc'); ?>
     <main>
 		  <h1 id="view-contribute-h1">Contribute Table</h1>
+      <ul class="view-links">
+        <li><a href="view_contribute.php">Contribute Table</a></li>
+        <li><a href="view_enquiry.php">Enquiry Table</a></li>
+      </ul>
       <?php
         include("conn.php");
 
