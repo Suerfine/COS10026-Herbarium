@@ -9,22 +9,23 @@ while (mysqli_more_results($conn) && mysqli_next_result($conn)) {
     }
 }
 
+$origin=$_GET["origin"]??"index.php";
 // Check if the user is already logged in and redirect
 if (isset($_SESSION['user_id'])) {
-    header("Location: contribute.php");
+    header("Location: $origin");
     exit;
 }
 
 $message = "";  // Initialize message variable
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = isset($_POST['email']) ? mysqli_real_escape_string($conn, $_POST['email']) : null;
+    $username = isset($_POST['uName']) ? mysqli_real_escape_string($conn, $_POST['uName']) : null;
     $password = isset($_POST['password']) ? $_POST['password'] : null;
 
-    if (!$email || !$password) {
+    if (!$username || !$password) {
         $message = "Both email and password are required";
     } else {
-        $sql = "SELECT `id`,`password`,`level` FROM users WHERE email = '$email'";
+        $sql = "SELECT `id`,`password`,`level` FROM users WHERE user_name = '$username'";
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
@@ -35,14 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['logged_in'] = true;
                     $_SESSION['level']=$user['level'];
 
-                    // Redirect to contribute.php after successful login
-                    header("Location: contribute.php");
+                    // Redirect to origin page after succesful login
+                    header("Location: $origin");
                     exit;
                 } else {
                     $message = "Invalid password";
                 }
             } else {
-                $message = "No user found with that email address";
+                $message = "No user found with that username";
             }
         } else {
             $message = "Query failed: " . mysqli_error($conn);
@@ -63,14 +64,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="icon" href="images/icon.png" type="image/x-icon">
 </head>
 <body>
+    <?php include_once("header.inc");?>
     <main>
         <h1 class="contribute-title">Login Page</h1>
         <h3 class="contribute-subtitle">Fill in the credentials</h3>    
-        <form class="contribute-form" action="login.php" method="POST">
+        <form class="contribute-form" action="login.php?<?php if($origin)echo "origin=".$origin;?>" method="POST">
             <?php if (!empty($message)) echo "<div class='error-message'>$message</div>"; ?>
             <div class="contribute-formgroup">
-                <label class="contribute-form-label">Email address:</label>
-                <input name="email" type="email" id="email" class="contribute-form-control" required>
+                <label class="contribute-form-label">Username:</label>
+                <input name="uName" type="text" id="uName" class="contribute-form-control" required>
             </div>
             <div class="contribute-formgroup">
                 <label class="contribute-form-label">Password:</label>

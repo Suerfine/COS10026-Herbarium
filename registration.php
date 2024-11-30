@@ -4,60 +4,39 @@ include 'conn.php';
 // Ensure all previous multi-query results are cleared
 while(mysqli_more_results($conn) && mysqli_next_result($conn));
 
+//initalize message
+$message="";
+
 // Check if the values exist before using them
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $userName = isset($_POST['uName']) ? mysqli_real_escape_string($conn, $_POST['uName']) : null;
     $firstName = isset($_POST['fName']) ? mysqli_real_escape_string($conn, $_POST['fName']) : null;
     $lastName = isset($_POST['lName']) ? mysqli_real_escape_string($conn, $_POST['lName']) : null;
     $email = isset($_POST['email']) ? mysqli_real_escape_string($conn, $_POST['email']) : null;
     $password = isset($_POST['password']) ? mysqli_real_escape_string($conn, $_POST['password']) : null;
 
-    if ($firstName && $lastName && $email && $password) {
-        // Encrypt the password
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+    if ($userName && $firstName && $lastName && $email && $password) {
+        //Check if username has been taken.
+        $sql="SELECT 1 FROM `users` WHERE `user_name`='$userName'";
+        if (($res=mysqli_query($conn, $sql)) && mysqli_num_rows($res)==0) {
 
-        $sql = "INSERT INTO users (first_name, last_name, email, password, level) VALUES ('$firstName', '$lastName', '$email', '$passwordHash', 'USER')";
+            // Encrypt the password
+            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-        if (mysqli_query($conn, $sql)) {
-            echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            $sql = "INSERT INTO users (user_name,first_name, last_name, email, password, level) VALUES ('$userName','$firstName', '$lastName', '$email', '$passwordHash', 'USER')";
+
+            if (mysqli_query($conn, $sql)) {
+                $message="Your account was created succesfully.";
+            } else {
+                $message="Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+        }else{
+            $message="Username has already been taken";
         }
     } else {
-        echo "All fields are required.";
+        $message="All fields are required.";
     }
-
-    //$SELECT = "SELECT id from contribution Where id = ? Limit 1";
-    $INSERT = "INSERT into contribution (first_name, last_name, email, 
-    street_address, 'city/town', 'state', postcode, phone_no, tutorial) values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    //$stmt = $stmt = $conn->prepare($SELECT);
-    //$stmt->bind_param("s", $id);
-    //$stmt->execute();
-    //$stmt->bind_result($id);
-    //$stmt->store_result();
-    //$rnum = $stmt->num_rows;
-    //if ($rnum == 0){
-        $stmt = $conn->prepare($INSERT);
-        $stmt->bind_param("ssssssiis", $fname, $lname, $email, 
-        $street, $city, $state, $postcode, $phone, $tutorial);
-        $stmt->execute();
-        echo "Enquiry data succesfully saved";
-        if($stmt->execute()){
-            echo "Enquiry data succesfully saved.";
-        }else{
-            echo "failed to insert";
-        }
-    //}
-    //else{
-    // echo "ID has already contributed";
-    //}
-    $stmt->close();
-    $conn->close();
-
-
-} else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo "Invalid request.";
 }
-
 mysqli_close($conn);
 ?>
 <!DOCTYPE html>
@@ -81,21 +60,26 @@ mysqli_close($conn);
 		<h1 class="contribute-title">Registration</h1>
         <h3 class="contribute-subtitle">Register your account.</h3>
         <form class="contribute-form" action="registration.php" method="POST">
+            <?php if($message)echo "<span>".$message."<span>"?>
             <div class="contribute-formgroup">
-                <label class="contribute-form-label">First Name:</label>
-                <input name="fName" class="contribute-form-control" type="text" maxlength="25" pattern="[a-zA-Z]+" required>
+                <label for="uName" class="contribute-form-label">User Name:</label>
+                <input id="uName" name="uName" class="contribute-form-control" type="text" maxlength="25" pattern="[a-zA-Z]+" required>
             </div>
             <div class="contribute-formgroup">
-                <label class="contribute-form-label">Last Name:</label>
-                <input name="lName" class="contribute-form-control" type="text" maxlength="25" pattern="[a-zA-Z]+" required>
+                <label for="fName" class="contribute-form-label">First Name:</label>
+                <input id="fName" name="fName" class="contribute-form-control" type="text" maxlength="25" pattern="[a-zA-Z]+" required>
             </div>
             <div class="contribute-formgroup">
-                <label class="contribute-form-label">Email address:</label>
-                <input name="email" class="contribute-form-control" type="email" required>
+                <label for="lName" class="contribute-form-label">Last Name:</label>
+                <input id="lName" name="lName" class="contribute-form-control" type="text" maxlength="25" pattern="[a-zA-Z]+" required>
             </div>
             <div class="contribute-formgroup">
-                <label class="contribute-form-label">Password:</label>
-                <input name="password" class="contribute-form-control" type="password" maxlength="25" required>
+                <label for="email" class="contribute-form-label">Email address:</label>
+                <input id="email" name="email" class="contribute-form-control" type="email" required>
+            </div>
+            <div class="contribute-formgroup">
+                <label for="password" class="contribute-form-label">Password:</label>
+                <input id="password" name="password" class="contribute-form-control" type="password" maxlength="25" required>
             </div>
             <div class="contribute-form-row">
                 <button type="submit">REGISTER ACCOUNT</button>

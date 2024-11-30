@@ -24,8 +24,12 @@
 		</section>
 		<section class="enquiry-form">
 		<h4 class="invi">&nbsp;</h4>
-			<form>
+			<form method="POST" action="enquiry_process.php">
 				<table class="enquiry-table">
+					<?php
+						//print out message sent by the server.
+						if(isset($_GET['msg']))echo"<tr><td colspan=2><span>{$_GET['msg']}</span><td></tr>";
+					?>
 					<tr>
 						<td>
 							<label for="fname">
@@ -110,7 +114,7 @@
 							<label for="phone">
 								Phone No.:
 							</label>
-							<input type="tel" id="phone" name="phone" maxlength="10" placeholder="+60XX-XXXXXXX" required>
+							<input type="tel" id="phone" name="phone" maxlength="15" placeholder="+60XX-XXXXXXX" required>
 						</td>	
 					<tr>
 						<td>	

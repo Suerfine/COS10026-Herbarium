@@ -41,7 +41,7 @@
 				<a class="tut" href="login.php">User</a>
 				<ul class="drop">
 					<?php
-					session_start();
+					if(!isset($_SESSION)){session_start();}
 					if(isset($_SESSION['user_id'])){
 						echo "<li><a href='logout.php'>Logout</a></li>";
 					}else{

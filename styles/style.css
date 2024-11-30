@@ -23,7 +23,6 @@ body{
 body::-webkit-scrollbar{
 	display: none;
 }
-
 .button-primary{
 	border: var(--primary-color) solid;
 	background-color: #53442d;
@@ -55,17 +54,17 @@ body::-webkit-scrollbar{
 }
 
 .w-100{width: 100%;}
+.w-70{width: 70%;}
 .w-30{width: 30%;}
 .d-flex{
 	display: flex;
 }
 
-.mb-1{
-	margin-bottom: 0.1rem;
-}
-.mt-1{
-	margin-top: 0.1rem;
-}
+.mb-1{margin-bottom: 0.1rem;}
+.mb-3{margin-bottom: 0.3rem;}
+
+.mt-1{margin-top: 0.1rem;}
+.mt-3{margin-top: 0.3rem;}
 
 /*Some table util classes*/
 .table-bordered,.table-bordered th,.table-bordered td{
@@ -1501,7 +1500,6 @@ clear on the link the user is about to click. */
 	margin-inline: 20px;
 }
 .form-control{
-	width: 100%;
     border-radius: 8px;
     padding: 5px;
     background-color: white;
@@ -1513,13 +1511,18 @@ clear on the link the user is about to click. */
 	margin-right: 5px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	min-width: fit-content;
 }
 .form-group-inline{
 	display: inline-flex;
 }
+.filter-form{
+	margin-inline:100px;
+}
+.text-right{text-align: right;}
 
 /* view_contribute.php style */
-.view-contribute-table th, td{
+.view-contribute-table th,.view-enquiry-table td{
 	text-align: center;
 	border: 1px solid var(--primary-color);
 	justify-content: center;
@@ -1538,7 +1541,7 @@ clear on the link the user is about to click. */
 }
 
 /* view_enquiry.php style */
-.view-enquiry-table th, td{
+.view-enquiry-table th,.view-enquiry-table td{
 	text-align: center;
 	border: 1px solid var(--primary-color);
 	justify-content: center;

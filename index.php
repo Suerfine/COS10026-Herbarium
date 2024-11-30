@@ -14,7 +14,7 @@
         <title>Herbarium - Home</title>
     </head>
     <body>
-        <?php include('header.inc.php'); ?>
+        <?php include('header.inc'); ?>
         <main>
             <div class="index-introduction-container">
                 <img src="./images/index/bACKGROUND.jpg" alt="Background Image">
