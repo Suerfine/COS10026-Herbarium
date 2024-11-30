@@ -60,7 +60,7 @@
               </tr>';
           }
 
-          echo "</table></div>";
+          echo "</table></div><br><br><br>";
         }
       ?>
     </main>
