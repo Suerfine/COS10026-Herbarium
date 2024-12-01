@@ -37,7 +37,7 @@
 				<div class="d-flex w-100">
 					<input type="search" class="form-control w-100" name="search" placeholder="Search by UserName / FirstName / LastName / Email" value="<?php echo $_GET['search']??""?>">
 					<label for="level" class="form-label">Level:</label>
-					<select name="level" id="level" class="form-control">
+					<select name="level" id="level" class="form-control w-30">
 						<?php
 						foreach(["All","ADMIN","USER"] as $option){
 							echo"<option value='{$option}'".(($option==($_GET['level']??"All"))?"selected":"").">".ucfirst($option)."</option>";
@@ -46,7 +46,8 @@
 					</select>
 				</div>
 				<div class="w-100 mt-3 mb-3 text-right">
-					<button class="button-primary" type="submit">Search</button>
+					<a class="btn-info" href="registration.php">REGISTER USER</a>
+					<button class="btn-info" type="submit">SEARCH</button>
 				</div>
 			</form>
 			<table class="table-default">
