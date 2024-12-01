@@ -34,8 +34,12 @@
 			<li>
 				<a href="group.php">Group</a>
 			</li>
-			<li>
-				<a href="enhancement1.php">Enhancement</a>
+			<li class="tutli">
+				<a class="tut" href="enhancement1.php">Enhancement</a>
+				<ul class="drop">
+					<li><a href="enhancement1.php">Enhancement 1</a></li>
+					<li><a href="Enhancement2.php">Enhancement 2</a></li>
+				</ul>
 			</li>
 			<li class="tutli">
 				<a class="tut" href="login.php">User</a>
