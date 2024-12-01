@@ -30,9 +30,9 @@
   <body>
     <?php include('header.inc');?>
     <main>
-		  <h1 id="view-enquiry-h1">Enquiry Table</h1>
+		  <h1 id="view-enquiry-h1" class="text-center">Enquiry Table</h1>
       <ul class="view-links">
-        <li><a href="admin_panel.php">Admin Panel</a></li>
+        <li><a href="user_management.php">User Management</a></li>
         <li><a href="view_contribute.php">Contribute Table</a></li>
         <li><a href="view_enquiry.php">Enquiry Table</a></li>
       </ul>
@@ -42,10 +42,11 @@
           <input type="search" class="form-control w-70" name="search" placeholder="Search by FirstName/LastName/Email">
           <label for="tutorial" class="form-label">Tutorial:</label>
           <select id="tutorial" class="form-control w-30" name="tutorial" required>
-            <option value="ALL" disabled selected hidden>All</option>
-            <option value="tutorial">Tutorial</option>
-            <option value="tools">Tools</option>
-            <option value="care">Care</option>
+            <?php
+              foreach(["All","tutorial","tools","care"] as $tutorialOption){
+                echo"<option value='{$tutorialOption}'".(($tutorialOption==($_GET['tutorial']??"All"))?"selected":"").">".ucfirst($tutorialOption)."</option>";
+              }
+            ?>
           </select>
         </div>
         <div class="w-100 mt-3 mb-3 text-right">
@@ -57,13 +58,12 @@
 
         if(!$conn){
           die('failed to connect to db'.mysqli_connect_error());
-        }
-        else{
+        }else{
           $sql="SELECT * FROM enquiry ";
           /*ENHANCEMENT SEARCH PARAMETER*/
           $search="\"%".mysqli_real_escape_string($conn,$_GET['search']??"")."%\"";
           $sql.="WHERE (`first_name` LIKE $search OR `last_name` LIKE $search OR `email` LIKE $search)";
-          if(isset($_GET['tutorial']) && $_GET['tutorial'] !="ALL"){
+          if(isset($_GET['tutorial']) && $_GET['tutorial'] !="All"){
             $sql.=" AND `tutorial`='".mysqli_real_escape_string($conn,$_GET['tutorial'])."'";
           }
           /*ENHANCEMENT SEARCH PARAMETER*/
@@ -71,43 +71,56 @@
           if(!$query){
             die('error found'.mysqli_error($conn));
           }
-
-          echo "
-              <div class='view-contribute-table'><table>
-              <tr>
-              <th>Id</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th>Street Address</th>
-              <th>City/Town</th>
-              <th>State</th>
-              <th>Postcode</th>
-              <th>Phone No.</th>
-              <th>Tutorial</th>
-              <th>Enquired On</th>
-              </tr>";
-
-            while ($row = mysqli_fetch_array($query))
-            {
-              echo ' <tr>
+          echo<<<HTML
+          <div class="mb-30">
+            <table class='table-default'>
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Street Address</th>
+                  <th>City/Town</th>
+                  <th>State</th>
+                  <th>Postcode</th>
+                  <th>Phone No.</th>
+                  <th>Tutorial</th>
+                  <th>Enquired On</th>
+                </tr>
+              </thead>
+              <tbody>
+          HTML;
+          while ($row = mysqli_fetch_array($query)){
+            echo ' <tr>
                 <td>'.$row['id'].'</td>
                 <td>'.$row['first_name'].'</td>
                 <td>'.$row['last_name'].'</td>
-                <td>'.$row['email'].'</td>
+                <td><a href="mailto:'.$row['email'].'">'.$row['email'].'</a></td>
                 <td>'.$row['street_address'].'</td>
                 <td>'.$row['city/town'].'</td>
                 <td>'.$row['state'].'</td>
                 <td>'.$row['postcode'].'</td>
-                <td>'.$row['phone_no'].'</td>
+                <td><a href="tel:'.$row['phone_no'].'">'.$row['phone_no'].'</a></td>
                 <td>'.$row['tutorial'].'</td>
                 <td>'.date("d/m/y H:i",strtotime($row['dt_create'])).'</td>
-                </tr>';
-            }
-
-            echo "</table></div>";
+              </tr>';
           }
+          echo<<<HTML
+              </tbody>
+            </table>
+          </div>
+          HTML;
+        }
       ?>
     </main>
+    <?php 
+      $sources=[
+        ["url"=>"https://fonts.google.com/icons?selected=Material+Symbols+Outlined:close:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed","label"=>"Nav X Icon"],
+        ["url"=>"https://youtu.be/EgqwdlY9iaQ?si=o7AitaXCotQ07HXe","label"=>"Responsive Navbar"],
+        ["url"=>"https://cdnjs.com/libraries/font-awesome","label"=>"Nav Bar Icon"],
+      ];
+      include('./footer.inc'); 
+    ?>
   </body>
 </html>

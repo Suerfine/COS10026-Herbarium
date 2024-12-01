@@ -29,9 +29,9 @@
   <body>    
     <?php include('header.inc'); ?>
     <main>
-		  <h1 id="view-contribute-h1">Contribute Table</h1>
+		  <h1 id="view-contribute-h1" class="text-center">Contribute Table</h1>
       <ul class="view-links">
-        <li><a href="admin_panel.php">Admin Panel</a></li>
+        <li><a href="user_management.php">User Management</a></li>
         <li><a href="view_contribute.php">Contribute Table</a></li>
         <li><a href="view_enquiry.php">Enquiry Table</a></li>
       </ul>
@@ -41,36 +41,27 @@
           <input type="search" class="form-control w-100" name="search" placeholder="Search by Plant Name" value="<?php echo $_GET['search']??""?>">
 					<label for="family" class="form-label">Plant Family:</label>
 					<select name="family" id="family" class="form-control">
-						<option value="ALL" selected>All</option>
-						<option value="Dipterocarpaceae">Dipterocarpaceae</option>
-						<option value="Lauraceae">Lauraceae</option>
-						<option value="Burseraceae">Burseraceae</option>
+            <?php
+              foreach(["All","Dipterocarpaceae","Lauraceae","Burseraceae"] as $option){
+                echo"<option value='{$option}'".(($option==($_GET['family']??"All"))?"selected":"").">".ucfirst($option)."</option>";
+              }
+            ?>
 					</select>
           <label for="genus" class="form-label">Plant Genus:</label>
 					<select id="genus" name="genus" class="form-control">
-						<option value="ALL">All</option>
-						<option value="Vatica">Vatica</option>
-						<option value="Dipterocarpus">Dipterocarpus</option>
-						<option value="Hopea">Hopea</option>
-						<option value="Actinodaphne">Actinodaphne</option>
-						<option value="Endiandra">Endiandra</option>
-						<option value="Beilschmiedia">Beilschmiedia</option>
-						<option value="Canarium">Canarium</option>
-						<option value="Dacryodes">Dacryodes</option>
-						<option value="Santiria">Santiria</option>
+            <?php
+              foreach(["All","Vatica","Dipterocarpus","Hopea","Actinodaphne","Endiandra","Beilschmiedia","Canarium","Dacryodes","Santiria"] as $option){
+                echo"<option value='{$option}'".(($option==($_GET['genus']??"All"))?"selected":"").">".ucfirst($option)."</option>";
+              }
+            ?>
 					</select>
           <label for="species" class="form-label">Plant Species:</label>
 					<select id="species" name="species" class="form-control" required>
-						<option value="ALL">All</option>
-						<option value="Vatica adenanii">Vatica adenanii </option>
-						<option value="Vatica sarawakensis">Vatica affinis</option>
-						<option value="Vatica cauliflora">Vatica cauliflora</option>
-						<option value="Hopea celebica">Hopea celebica</option>
-						<option value="Hopea discolor">Hopea discolor</option>
-						<option value="Hopea gregaria">Hopea gregaria</option>
-						<option value="Endiandra baillonii">Endiandra baillonii</option>
-						<option value="Endiandra brassii">Endiandra brassii</option>
-						<option value="Endiandra cuneata">Endiandra cuneata</option>
+            <?php
+              foreach(["All","Vatica adenanii","Vatica sarawakensis","Vatica cauliflora","Hopea celebica","Hopea discolor","Hopea gregaria","Endiandra baillonii","Endiandra brassii","Endiandra cuneata"] as $option){
+                echo"<option value='{$option}'".(($option==($_GET['species']??"All"))?"selected":"").">".ucfirst($option)."</option>";
+              }
+            ?>
 					</select>
         </div>
         <div class="w-100 mt-3 mb-3 text-right">
@@ -87,27 +78,30 @@
           $sql = "SELECT * FROM contribution";
           $search="\"%".mysqli_real_escape_string($conn,$_GET['search']??"")."%\"";
           $sql.=" WHERE `plant_name` LIKE $search ";
-          if(isset($_GET['family']) && $_GET['family']!="ALL")$sql.="AND `plant_family`=\"".mysqli_real_escape_string($conn,$_GET['family'])."\" ";
-          if(isset($_GET['genus']) && $_GET['genus']!="ALL")$sql.="AND `plant_genus`=\"".mysqli_real_escape_string($conn,$_GET['genus'])."\"";
-          if(isset($_GET['species']) && $_GET['species']!="ALL")$sql.="AND `plant_species`=\"".mysqli_real_escape_string($conn,$_GET['species'])."\" ";
+          if(isset($_GET['family']) && $_GET['family']!="All")$sql.="AND `plant_family`=\"".mysqli_real_escape_string($conn,$_GET['family'])."\" ";
+          if(isset($_GET['genus']) && $_GET['genus']!="All")$sql.="AND `plant_genus`=\"".mysqli_real_escape_string($conn,$_GET['genus'])."\"";
+          if(isset($_GET['species']) && $_GET['species']!="All")$sql.="AND `plant_species`=\"".mysqli_real_escape_string($conn,$_GET['species'])."\" ";
           $query = mysqli_query($conn,$sql);
 
           if(!$query){
             die('error found'.mysqli_error($conn));
           }
-
-          echo "
-            <div class='view-contribute-table'><table class='table-bordered'>
-            <tr>
-              <th>Id</th>
-              <th>Plant Name</th>
-              <th>Plant Family</th>
-              <th>Plant Genus</th>
-              <th>Plant Species</th>
-              <th>Herbarium Image</th>
-              <th>Fresh Leaf Image</th>
-            </tr>";
-
+          echo<<<HTML
+          <div class="mb-30">
+            <table class='table-default'>
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Plant Name</th>
+                  <th>Plant Family</th>
+                  <th>Plant Genus</th>
+                  <th>Plant Species</th>
+                  <th>Herbarium Image</th>
+                  <th>Fresh Leaf Image</th>
+                </tr>
+              </thead>
+              <tbody>
+          HTML;
           while ($row = mysqli_fetch_array($query))
           {
             echo ' <tr>
@@ -120,10 +114,21 @@
               <td><a href="'.$row['fresh_leaf_img'].'"><img src="'.$row['fresh_leaf_img'].'" width="100" height="100" alt="'.basename($row['fresh_leaf_img']).'"/></a></td>
             </tr>';
           }
-
-          echo "</table></div>";
+          echo<<<HTML
+              </tbody>
+            </table>
+          </div>
+          HTML;
         }
       ?>
     </main>
+    <?php
+      $sources=[
+        ["url"=>"https://fonts.google.com/icons?selected=Material+Symbols+Outlined:close:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed","label"=>"Nav X Icon"],
+        ["url"=>"https://youtu.be/EgqwdlY9iaQ?si=o7AitaXCotQ07HXe","label"=>"Responsive Navbar"],
+        ["url"=>"https://cdnjs.com/libraries/font-awesome","label"=>"Nav Bar Icon"],
+      ];
+      include('./footer.inc'); 
+    ?>
   </body>
 </html>
