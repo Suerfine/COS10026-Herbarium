@@ -1576,3 +1576,8 @@ clear on the link the user is about to click. */
 .view-links li a:visited{
 	color: var(--primary-color);
 }
+
+/* enhancement link style */
+#enhance{
+	font: bold 15px Courier, sans-serif;
+}
