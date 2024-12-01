@@ -49,6 +49,7 @@
 					}
 					?>
 					<li><a href="registration.php">Register</a></li>
+					<li><a href="update.php">Update</a></li>
 				</ul>
 			</li>
 		</ul>
