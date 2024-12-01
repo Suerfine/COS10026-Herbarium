@@ -76,34 +76,32 @@
             <table class='table-default'>
               <thead>
                 <tr>
-                  <th>Id</th>
                   <th>First Name</th>
                   <th>Last Name</th>
-                  <th>Email</th>
                   <th>Street Address</th>
                   <th>City/Town</th>
                   <th>State</th>
                   <th>Postcode</th>
-                  <th>Phone No.</th>
+                  <th>Contact</th>
                   <th>Tutorial</th>
                   <th>Enquired On</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
           HTML;
           while ($row = mysqli_fetch_array($query)){
             echo ' <tr>
-                <td>'.$row['id'].'</td>
                 <td>'.$row['first_name'].'</td>
                 <td>'.$row['last_name'].'</td>
-                <td><a href="mailto:'.$row['email'].'">'.$row['email'].'</a></td>
                 <td>'.$row['street_address'].'</td>
                 <td>'.$row['city/town'].'</td>
                 <td>'.$row['state'].'</td>
                 <td>'.$row['postcode'].'</td>
-                <td><a href="tel:'.$row['phone_no'].'">'.$row['phone_no'].'</a></td>
+                <td><a href="mailto:'.$row['email'].'">'.$row['email'].'</a><br><a href="tel:'.$row['phone_no'].'">'.$row['phone_no'].'</a></td>
                 <td>'.$row['tutorial'].'</td>
                 <td>'.date("d/m/y H:i",strtotime($row['dt_create'])).'</td>
+                <td><a class="btn-info" href="enquiry_delete.php?id='.$row['id'].'">RESOLVE</a></td>
               </tr>';
           }
           echo<<<HTML

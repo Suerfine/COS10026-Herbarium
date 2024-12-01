@@ -10,7 +10,7 @@ if(!isset($_SESSION['level']) || $_SESSION['level']!="ADMIN"){
 }
 include_once("conn.php");
 try{
-    //check if a username was passed
+    //check if a user id was passed
     if(!isset($_GET['id'])){
         throw new Exception("Missing User Id");
         die;
