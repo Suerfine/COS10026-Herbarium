@@ -5,7 +5,7 @@
       <p>
         Please login with a Admin account.
       </p>
-      <a href="login.php?origin=view_enquiry.php">LogIn</a>
+      <a href="login.php?origin=view_contribute.php">LogIn</a>
       <a href="logout.php">LogOut</a>
     HTML;
     die();
