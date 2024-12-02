@@ -1595,6 +1595,6 @@ clear on the link the user is about to click. */
 }
 
 /* enhancement link style */
-#enhance{
+.enhance_num{
 	font: bold 15px Courier, sans-serif;
 }

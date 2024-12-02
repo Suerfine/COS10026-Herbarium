@@ -41,9 +41,9 @@
                 <div class="enhancement-extra">
                     <h3>Pages with this enhancement:</h3>
                     <div class="enhancement-pageLinks">
-                        <a>user_management.php</a>
-                        <a>user_update.php</a>
-                        <a>user_delete.php</a>
+                        <a href="user_management.php">user_management.php</a>
+                        <a href="user_update.php">user_update.php</a>
+                        <a href="user_delete.php">user_delete.php</a>
                     </div>
                 </div>
             </section>
@@ -66,7 +66,28 @@
                 <div class="enhancement-extra">
                     <h3>Pages with this enhancement:</h3>
                     <div class="enhancement-pageLinks">
-                        <a>contribute.php</a>
+                        <a href="contribute.php">contribute.php</a>
+                        <a href="view_contribute.php">view_contribute.php</a>
+                    </div>
+                </div>
+            </section>
+            <section class="enhancement-row">
+                <h2>Product search</h2>
+                <div class="enhancement-row-group">
+                    <img src="images\Enhancement\search.gif" alt="Search Module">
+                    <p>
+                        Product search feature is added to all the admin view pages to easily filter and find the required entry. To achieve this the input is designed as a form
+                        with &lt;input type="text"> to search by names and  &lt;select> used to filter rows that have a limited set of values, eg in enquiry is limited to tutorial
+                         / care /tools. After filling in the inputs clicking the submit button will submit the form back to the page passing in all the values as a GET request. The
+                        values are then used to modify the WHERE part of the SQL query filtering the result to what we require.
+                    </p>
+                </div>
+                <div class="enhancement-extra">
+                    <h3>Pages with this enhancement:</h3>
+                    <div class="enhancement-pageLinks">
+                        <a href="user_management.php">user_management.php</a>
+                        <a href="view_contribute.php">view_contribute.php</a>
+                        <a href="view_enquiry.php">view_enquiry.php</a>
                     </div>
                 </div>
             </section>

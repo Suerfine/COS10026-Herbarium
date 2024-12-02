@@ -80,7 +80,8 @@
         <footer>
             <div class="footerrow">
                 <div class="index-footerPresentationWrapper">
-                    <a href="https://youtu.be/hbgkiSGwf6w">Presentation video</a>
+                    <a href="https://youtu.be/hbgkiSGwf6w">Presentation video 1</a>
+                    <a href="https://youtu.be/fJIn3mXwcQ8?si=LObU1piCSltfUJ6W">Presentation video 2</a>
                 </div>
                 <div class="footercol">
                     <h4>Herbarium</h4>
