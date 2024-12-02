@@ -51,10 +51,10 @@ $sql="CREATE TABLE IF NOT EXISTS `contribution`(
         ON DUPLICATE KEY UPDATE `user_name` = `user_name`;
     -- Inserting some default contributions
     INSERT INTO `contribution` (`id`,`plant_name`, `plant_family`, `plant_genus`, `plant_species`, `herbarium_img`, `fresh_leaf_img`) VALUES
-        (1,'Vatica sarawakensis', 'Dipterocarpaceae', 'Vatica', 'Vatica sarawakensis', 'images\\user_images\\contribute\\herb\\Vatica sarawakensis.jpg', 'images\\user_images\\contribute\\leaf\\Vatica sarawakensis.jpg'),
-        (2,'Hopea celebica Burck', 'Dipterocarpaceae', 'Hopea', 'Hopea celebica', 'images\\user_images\\contribute\\herb\\Hopea celebica.jpg', 'images\\user_images\\contribute\\leaf\\Hopea celebica.jpg'),
-        (3,'Endiandra brassi C.K.Allen', 'Lauraceae', 'Endiandra', 'Endiandra brassii', 'images\\user_images\\contribute\\herb\\Endiandra brassii.jpg', 'images\\user_images\\contribute\\leaf\\Endiandra brassii.jpg'),
-        (4,'Hopea discolor Thwaites', 'Dipterocarpaceae', 'Hopea', 'Hopea discolor', 'images\\user_images\\contribute\\herb\\Hopea discolor.jpg', 'images\\user_images\\contribute\\leaf\\Hopea discolor.jpg')
+        (1,'Vatica sarawakensis', 'Dipterocarpaceae', 'Vatica', 'Vatica sarawakensis', 'images/user_images/contribute/herb/Vatica sarawakensis.jpg', 'images/user_images/contribute/leaf/Vatica sarawakensis.jpg'),
+        (2,'Hopea celebica Burck', 'Dipterocarpaceae', 'Hopea', 'Hopea celebica', 'images/user_images/contribute/herb/Hopea celebica.jpg', 'images/user_images/contribute/leaf/Hopea celebica.jpg'),
+        (3,'Endiandra brassi C.K.Allen', 'Lauraceae', 'Endiandra', 'Endiandra brassii', 'images/user_images/contribute/herb/Endiandra brassii.jpg', 'images/user_images/contribute/leaf/Endiandra brassii.jpg'),
+        (4,'Hopea discolor Thwaites', 'Dipterocarpaceae', 'Hopea', 'Hopea discolor', 'images/user_images/contribute/herb/Hopea discolor.jpg', 'images/user_images/contribute/leaf/Hopea discolor.jpg')
         ON DUPLICATE KEY UPDATE `id` = `id`;
 ";
 mysqli_multi_query($conn,$sql);
