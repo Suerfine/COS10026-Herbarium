@@ -37,8 +37,8 @@
 			<li class="tutli">
 				<a class="tut" href="enhancement1.php">Enhancement</a>
 				<ul class="drop">
-					<li><a href="enhancement1.php">Enhancement 1</a></li>
-					<li><a href="Enhancement2.php">Enhancement 2</a></li>
+					<li><a href="enhancement1.php">Enhancement <span id="enhance">1</span></a></li>
+					<li><a href="enhancement2.php">Enhancement <span id="enhance">2</span></a></li>
 				</ul>
 			</li>
 			<li class="tutli">

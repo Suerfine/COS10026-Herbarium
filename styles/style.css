@@ -1593,3 +1593,8 @@ clear on the link the user is about to click. */
 #user-update-formGroup{
 	padding-right: 3px;
 }
+
+/* enhancement link style */
+#enhance{
+	font: bold 15px Courier, sans-serif;
+}
