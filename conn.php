@@ -45,9 +45,16 @@ $sql="CREATE TABLE IF NOT EXISTS `contribution`(
         PRIMARY KEY (`id`),
         UNIQUE(`user_name`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+    -- Inserting the default Admin account
     INSERT INTO `users` (`id`, `user_name`, `first_name`, `last_name`, `level`, `email`, `password`) 
         VALUES (1, 'Admin', 'Admin', 'Admin', 'ADMIN', 'Admin@admin.com', '\$2y\$10\$bX5IWEG1xGzs7ewrpc45MeNIB/5l3hemvI.NE5LlJ/FYQ2LXtVJxq')
         ON DUPLICATE KEY UPDATE `user_name` = `user_name`;
+    -- Inserting some default contributions
+    INSERT INTO `contribution` (`plant_name`, `plant_family`, `plant_genus`, `plant_species`, `herbarium_img`, `fresh_leaf_img`) VALUES
+        ('Vatica sarawakensis', 'Dipterocarpaceae', 'Vatica', 'Vatica sarawakensis', 'images\\user_images\\contribute\\herb\\Vatica sarawakensis.jpg', 'images\\user_images\\contribute\\leaf\\Vatica sarawakensis.jpg'),
+        ('Hopea celebica Burck', 'Dipterocarpaceae', 'Hopea', 'Hopea celebica', 'images\\user_images\\contribute\\herb\\Hopea celebica.jpg', 'images\\user_images\\contribute\\leaf\\Hopea celebica.jpg'),
+        ('Endiandra brassi C.K.Allen', 'Lauraceae', 'Endiandra', 'Endiandra brassii', 'images\\user_images\\contribute\\herb\\Endiandra brassii.jpg', 'images\\user_images\\contribute\\leaf\\Endiandra brassii.jpg'),
+        ('Hopea discolor Thwaites', 'Dipterocarpaceae', 'Hopea', 'Hopea discolor', 'images\\user_images\\contribute\\herb\\Hopea discolor.jpg', 'images\\user_images\\contribute\\leaf\\Hopea discolor.jpg'),
 ";
 mysqli_multi_query($conn,$sql);
 unset($servername,$username,$password,$dbname);

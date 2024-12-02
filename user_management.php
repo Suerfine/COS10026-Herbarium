@@ -3,7 +3,7 @@
 	if(!isset($_SESSION['level']) || $_SESSION['level']!="ADMIN"){
 		echo<<<HTML
 			<p>Please login with a Admin account.</p>
-			<a href="login.php?origin=view_enquiry.php">LogIn</a>
+			<a href="login.php?origin=user_management.php">LogIn</a>
 			<a href="logout.php">LogOut</a>
 		HTML;
 		die();

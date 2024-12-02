@@ -67,7 +67,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 					<select name="species" class="contribute-form-control" required>
 						<option value="" selected>Please choose a species</option>
 						<option value="Vatica adenanii">Vatica adenanii </option>
-						<option value="Vatica sarawakensis">Vatica affinis</option>
+						<option value="Vatica sarawakensis">Vatica sarawakensis</option>
 						<option value="Vatica cauliflora">Vatica cauliflora</option>
 						<option value="Hopea celebica">Hopea celebica</option>
 						<option value="Hopea discolor">Hopea discolor</option>

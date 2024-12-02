@@ -54,6 +54,7 @@ try{
         <?php include('header.inc');?>
         <main>
             <h1 class="text-center">Enquiry</h1>
+            <form action="enquiry_delete.php?id=<?php echo $id?>" method="post">
             <table class="table-default mb-30">
                 <thead>
                     <tr>
@@ -104,6 +105,7 @@ try{
                     </tr>
                 </tfoot>       
             </table>
+            </form>
         </main>
         <?php 
             $sources=[

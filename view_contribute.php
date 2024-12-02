@@ -127,6 +127,9 @@
         ["url"=>"https://fonts.google.com/icons?selected=Material+Symbols+Outlined:close:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed","label"=>"Nav X Icon"],
         ["url"=>"https://youtu.be/EgqwdlY9iaQ?si=o7AitaXCotQ07HXe","label"=>"Responsive Navbar"],
         ["url"=>"https://cdnjs.com/libraries/font-awesome","label"=>"Nav Bar Icon"],
+        ["url"=>"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:321711-1","label"=>"Vatica sarawakensis Image"],
+        ["url"=>"https://www.gbif.org/occurrence/gallery?taxon_key=5669254","label"=>"Hopea celebica Burck Image"],
+        ["url"=>"https://www.gbif.org/occurrence/gallery?taxon_key=5669192","label"=>"Hopea discolor Thwaites Image"],
       ];
       include('./footer.inc'); 
     ?>
