@@ -59,8 +59,8 @@ mysqli_close($conn);
     <main>
 		<h1 class="contribute-title">Registration</h1>
         <h3 class="contribute-subtitle">Register your account.</h3>
-        <form class="contribute-form" action="registration.php" method="POST">
-            <?php if($message)echo "<span>".$message."<span>"?>
+        <form id="registration_form" class="contribute-form" action="registration.php" method="POST">
+            <?php if($message)echo "<span id=\"message\">".$message."</span>"?>
             <div class="contribute-formgroup">
                 <label for="uName" class="contribute-form-label">User Name:</label>
                 <input id="uName" name="uName" class="contribute-form-control" type="text" maxlength="25" pattern="[a-zA-Z]+" required>
